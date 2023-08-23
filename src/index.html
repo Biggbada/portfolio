@@ -15,12 +15,12 @@
   <body>
     <header>
       <nav id="top-navbar">
-        <div class="flex-row">
+        <div class="nav-container">
           <ul>
-            <div class="flex-row">
-              <li><a href="./index.html">yann-guenot</a></li>
+            <div class="flex-row" id="nav-row">
+              <li id="yann-guenot"><a href="./index.html">yann-guenot</a></li>
               <li><a href="./about.html">_about</a></li>
-              <li><a href="#">_in_progress</a></li>
+              <li><a href="./projects.html">_in_progress</a></li>
               <li><a href="#">_incoming</a></li>
               <li><a href="#">_delivered</a></li>
               <li><a href="#">_pricing</a></li>
@@ -74,7 +74,45 @@
                 height="30"
               />
             </div>
-            <div class="item" id="metal-block-content">HELLO</div>
+            <div class="flex-row item" id="metal-block-content">
+              <div id="metal-block-content-left">
+                <img src="./assets/snake-food.svg" alt="" />
+                <img src="./assets/snake.svg" alt="" />
+                <button class="yellow-button">start-game</button>
+              </div>
+              <div id="metal-block-content-right">
+                <div class="flex-row">
+                  <p>
+                    // use keyboard<br />
+                    // arrows to play
+                  </p>
+                </div>
+                <div class="flex-row">
+                  <img src="./assets/up-arrow.svg" alt="" />
+                </div>
+                <div class="flex-row">
+                  <img src="./assets/left-arrow.svg" alt="" />
+                  <img src="./assets/down-arrow.svg" alt="" />
+                  <img src="./assets/right-arrow.svg" alt="" />
+                </div>
+                <div id="snake-food" class="flex-row">
+                  <p id="food-left">// food left</p>
+                  <p>
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food.svg" alt="" />
+                    <img src="./assets/snake-food-off.svg" alt="" />
+                    <img src="./assets/snake-food-off.svg" alt="" />
+                    <img src="./assets/snake-food-off.svg" alt="" />
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div id="metal-block-bottom">
               <img
                 id="bolt-up-left"
@@ -91,7 +129,6 @@
                 height="30"
               />
             </div>
-            <div class="home-blur"></div>
           </div>
         </div>
       </div>
