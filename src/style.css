@@ -25,8 +25,10 @@ body {
     border-top: 1px solid #607B96;
     border-bottom: 1px solid #607B96;
     position: absolute;
-    top: 0;
     width: 100vw;
+}
+#top-nav-container {
+    top: 0;
 }
 #top-navbar {
     width: 100%;
@@ -72,6 +74,7 @@ body {
     margin-left: auto;
 }
 #home-main {
+    margin-top: 5rem;
     padding-left: 5rem;
     padding-right: 5rem;
     box-sizing: border-box;
@@ -212,39 +215,64 @@ h1 {
 #snake-food {
     width: 10rem;
 }
-
-#bottom-navbar {
-    position: absolute;
+#bottom-nav-container {
     bottom: 0;
-    min-height: 5vh;
+}
+#bottom-navbar {
+    width: 100%;
+    color: #607B96;
+    background-color: #011627;
+    bottom: 0;
+}
+
+#nav-row {
     width: 100vw;
 }
 
+#bottom-navbar a {
+    color: #607B96;
+    text-decoration: none;
+}
+
+#bottom-navbar a:active {
+    color: #E5E9F0;
+}
+
+#bottom-navbar a:hover {
+    color: #E5E9F0;
+}
+
+#bottom-navbar a:active {
+    color: #E5E9F0;
+}
+
 #bottom-navbar ul {
-    min-width: 100vw;
     padding-inline-start: 0;
     box-sizing: border-box;
+    margin: 0;
 }
 
 #bottom-navbar li {
     float: left;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 1rem 1.5rem 1rem 1.5rem;
     box-sizing: border-box;
-    border: 1px solid #607B96;
+    border-left: 1px solid #607B96;
+    border-right: 1px solid #607B96;
     list-style: none;
 }
-.noli {
-    list-style: none;
-}
+
 #bottom-navbar li:first-of-type {
     border-left: 0;
-    padding-right: 5rem;
     box-sizing: border-box;
+    width: 17vw;
 }
 
 #bottom-navbar li:last-of-type {
     border-right: 0;
     margin-left: auto;
+}
+.noli {
+    list-style: none;
 }
 #git-link:visited {
     color: #E5E9F0;
@@ -420,3 +448,4 @@ input:checked .checkmark {
     margin-left: 1.94rem;
     margin-bottom: 1.97rem;
 }
+.skip-button
