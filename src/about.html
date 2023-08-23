@@ -13,18 +13,19 @@
   </head>
 
   <body>
+    <div id="about-main-container" class="content">
     <header>
       <nav id="top-navbar">
         <div class="flex-row">
           <ul>
-            <div class="flex-row">
-              <li><a href="./index.html">yann-guenot</a></li>
+            <div class="flex-row-start">
+              <li id="yann-guenot"><a href="./index.html">yann-guenot</a></li>
               <li><a href="./about.html">_about</a></li>
               <li><a href="#">_in_progress</a></li>
               <li><a href="#">_incoming</a></li>
               <li><a href="#">_delivered</a></li>
               <li><a href="#">_pricing</a></li>
-              <li><a href="#">_recent posts</a></li>
+              <li><a href="#">_recent</a></li>
               <li><a href="#">_contact</a></li>
               <li><a href="#">_login</a></li>
             </div>
@@ -34,9 +35,19 @@
     </header>
 
     <main id="about-main">
-      <div class="flex-row" id="about-content">
+      <div id="about-top-bar" class="flex-row-start">
+        <div id="bio-personal-info" class="flex-row-start">
+          personal-info
+      </div>
+      <div id="about-nav" class="flex-row-start">
+            personal-info<span id="personal-info-close">x</span>
+          </div>
+          <div id="over-snippet-bar" class="flex-row-start"></div>
+      </div>
+      
+      <div id="about-content" class="flex-row-start">
         <div id="bio-col-1" class="item-column bordered">
-          <div id="bio-personal-info" class="bio-items">personal-info</div>
+         
           <div id="bio-folders" class="bio-items">
             <ul>
               <li class="noli">
@@ -90,9 +101,7 @@
           </div>
         </div>
         <div id="bio-col-2" class="item-column bordered">
-          <div id="about-nav">
-            personal-info<span id="personal-info-close">x</span>
-          </div>
+          
           <div id="bio-content" class="code">
             /**<br>
      1   * About me
@@ -222,5 +231,6 @@
         </div>
       </nav>
     </footer>
+    </div>
   </body>
 </html>
