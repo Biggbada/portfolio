@@ -198,15 +198,21 @@ h1 {
     padding-right: 1rem;
     box-sizing: border-box;
     border: 2px solid wheat;
+    background-color: #011627;
+}
+#about-content {
+    align-items: start;
+    margin-top: 3rem;
 }
 #bio-col-1 {
-    width: 20%;
+    width: 20%; 
 }
 #bio-col-2 {
-    width: 50%;
+    width: 40%;
 }
 #bio-col-3 {
-    width: 10%;
+    width: 30%;
+    color: #607B96;
 }
 .bio-items {
     display: flex;
@@ -221,4 +227,39 @@ h1 {
 }
 #personal-info-close {
     margin-left: auto;
+}
+.code {
+    color: #607B96;
+    font-size: 1.125rem;
+}
+.thin-para {
+    margin: 0;
+}
+.violet {
+    color: #5565E8;
+}
+.salmon {
+    color: #E99287;
+}
+.pink {
+    color: #C98BDF;
+}
+.orange {
+    color: #FEA55F;
+}
+.green {
+    color: #43D9AD;
+}
+#about-username {
+    font-size: .875rem;
+}
+#about-created-at {
+    font-size: .75rem;
+}
+.about-code-block {
+    border-radius: 0.9375rem;
+    border: 1px solid #1E2D3D;
+    background: #011221;
+    padding: 1.5rem 1.85rem 1.5rem 1.85rem;
+    text-align: left;
 }
