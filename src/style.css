@@ -22,10 +22,12 @@ body {
     flex-flow: row wrap;
     justify-content: start;
     align-items: center;
-    border-top: 1px solid #607B96;
-    border-bottom: 1px solid #607B96;
-    position: absolute;
+    border-top: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
+    position: fixed;
     width: 100vw;
+    z-index: 2;
+    background-color: #011627e5;
 }
 #top-nav-container {
     top: 0;
@@ -60,8 +62,8 @@ body {
     float: left;
     padding: 1rem 1.5rem 1rem 1.5rem;
     box-sizing: border-box;
-    border-left: 1px solid #607B96;
-    border-right: 1px solid #607B96;
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
     list-style: none;
 }
 #top-navbar li:first-of-type {
@@ -102,12 +104,21 @@ h1 {
     justify-content: start;
     align-items: center;
 }
+.gap-1 {
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.centered-img {
+    vertical-align: middle;
+    margin-left: .5rem;
+    margin-right: .5rem;
+}
 .item-column {
     display: flex;
     flex-flow: column wrap;
 }
 .bordered {
-    border: 1px solid #607B96;
+    border: 1px solid #1E2D3D;
 }
 #full-stack-title {
     color: #4D5BCE;
@@ -133,8 +144,9 @@ h1 {
 #gitlink {
     color: #43D9AD;
 }
-#link {
+#link a {
     color: #E99287;
+    text-decoration: none;
 }
 #metal-block {
     border-radius: 0.5rem;
@@ -148,19 +160,7 @@ h1 {
 }
 #metal-block-content {
     justify-content: space-between;
-}
-#metal-block-content-left {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 25.3325rem;
-    flex-shrink: 0;
-    border-radius: 0.5rem;
-    background: rgba(1, 22, 39, 0.84);
-    box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
-    margin-left: 2rem;
+    align-items: start;
 }
 .yellow-button {
     display: inline-flex;
@@ -178,13 +178,39 @@ h1 {
     font-weight: 450;
     line-height: normal;
 }
-#metal-block-content-right {
-    width: 12rem;
-    height: 8.875rem;
+#metal-block-content-left {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: 15rem;
+    height: 25.3325rem;
     flex-shrink: 0;
     border-radius: 0.5rem;
-    background: rgba(1, 20, 35, 0.19);
+    background: rgba(1, 22, 39, 0.84);
+    box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
+    margin-left: 2rem;
+}
+#metal-block-content-right {
+    width: 11rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: 25.3325rem;
+    flex-shrink: 0;
     margin-right: 2rem;
+}
+#commands-container {
+    border-radius: 0.5rem;
+    background: rgba(1, 20, 35, 0.19);
+    padding: .7rem;
+}
+#game-instructions {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 450;
+    line-height: normal;
 }
 .home-blur {
     fill: #4D5BCE;
@@ -214,6 +240,12 @@ h1 {
 }
 #snake-food {
     width: 10rem;
+}
+#skip-button-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: end;
+    align-items: end;
 }
 #bottom-nav-container {
     bottom: 0;
@@ -256,8 +288,8 @@ h1 {
     float: left;
     padding: 1rem 1.5rem 1rem 1.5rem;
     box-sizing: border-box;
-    border-left: 1px solid #607B96;
-    border-right: 1px solid #607B96;
+    border-left: 1px solid #1E2D3D;
+    border-right: 1px solid #1E2D3D;
     list-style: none;
 }
 
@@ -304,10 +336,11 @@ h1 {
 #about-top-bar div {
     height: 3.125rem;
     align-items: center;
+    border-bottom: 1px solid #1E2D3D;
 }
 #over-snippet-bar {
     width: 30vw;
-    border: 1px solid #607B96;
+    border: 1px solid #1E2D3D;
 }
 #about-main {
     box-sizing: border-box;
@@ -318,13 +351,19 @@ h1 {
 }
 #bio-personal-info {
     width: 17vw;
-    border: 1px solid #607B96;
+    border-top: 1px solid #1E2D3D;
     border-left: 0;
+    padding-left: 40px;
+    box-sizing: border-box;
 
+}
+#bio-contacts {
+    padding-left: 40px;
 }
 #bio-col-1 {
     width: 17vw;
-    border: 1px solid #607B96;
+    border-top: 1px solid #1E2D3D;
+    border-bottom: 1px solid #1E2D3D;
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -344,7 +383,7 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     width: 40vw;
-    border: 1px solid #607B96;
+    border: 1px solid #1E2D3D;
 }
 #personal-info-close {
     margin-left: auto;
@@ -392,7 +431,7 @@ input[type="checkbox"] {
 .checkmark {
     min-width: 1.15rem;
     min-height: 1.15rem;
-    border: 1px solid #607B96;
+    border: 1px solid #1E2D3D;
     background: #011627;
     border-radius: .13rem;
 }
@@ -448,4 +487,51 @@ input:checked .checkmark {
     margin-left: 1.94rem;
     margin-bottom: 1.97rem;
 }
-.skip-button
+.skip-button {
+    display: inline-flex;
+    padding: 0.625rem 0.875rem;
+    justify-content: center;
+    align-items: center;
+    gap: 0.625rem;
+    border-radius: 0.5rem;
+    border: 1px solid #FFF;
+    background-color: transparent;
+    color: #FFF;
+}
+
+/*contact*/
+
+.contacts-items {
+    margin-bottom: 1rem;
+    color: #607B96;
+}
+#contact-form-container {
+    color: #607B96;
+            margin-left: 8rem;
+            margin-right: 8rem;
+}
+#contact-form-container label {
+    margin-bottom: .6rem;
+}
+#contact-form-container input{
+    width: 23.25rem;
+        height: 2.5625rem;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+            border: 1px solid #607B96;
+            background: #011221;
+            box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.30);
+            margin-bottom: 1.5rem;
+}
+#contact-form-container textarea{
+    width: 23.25rem;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+            border: 1px solid #607B96;
+            background: #011221;
+            box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.30);
+}
+#contact-form-displayer {
+    width: 29vw;
+    padding: 1rem;
+}

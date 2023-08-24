@@ -24,8 +24,8 @@
               <li><a href="#">_incoming</a></li>
               <li><a href="#">_delivered</a></li>
               <li><a href="#">_pricing</a></li>
-              <li><a href="#">_recent posts</a></li>
-              <li><a href="#">_contact</a></li>
+              <li><a href="#">_recent</a></li>
+              <li><a href="./contact.html">_contact</a></li>
               <li><a href="#">_login</a></li>
             </div>
           </ul>
@@ -50,7 +50,7 @@
               <span> = </span>
               <span id="link"
                 ><a href="https://github.com/Biggbada" target="_blank"
-                  >https://github.com/Biggbada”</a
+                  >"https://github.com/Biggbada"</a
                 >
               </span>
             </p>
@@ -81,19 +81,21 @@
                 <button class="yellow-button">start-game</button>
               </div>
               <div id="metal-block-content-right">
-                <div class="flex-row">
-                  <p>
-                    // use keyboard<br />
-                    // arrows to play
-                  </p>
-                </div>
-                <div class="flex-row">
-                  <img src="./assets/up-arrow.svg" alt="" />
-                </div>
-                <div class="flex-row">
-                  <img src="./assets/left-arrow.svg" alt="" />
-                  <img src="./assets/down-arrow.svg" alt="" />
-                  <img src="./assets/right-arrow.svg" alt="" />
+                <div id="commands-container">
+                  <div class="flex-row">
+                    <p id="game-instructions">
+                      // use keyboard<br />
+                      // arrows to play
+                    </p>
+                  </div>
+                  <div class="flex-row">
+                    <img src="./assets/up-arrow.svg" alt="" />
+                  </div>
+                  <div class="flex-row">
+                    <img src="./assets/left-arrow.svg" alt="" />
+                    <img src="./assets/down-arrow.svg" alt="" />
+                    <img src="./assets/right-arrow.svg" alt="" />
+                  </div>
                 </div>
                 <div id="snake-food" class="flex-row">
                   <p id="food-left">// food left</p>
@@ -110,7 +112,9 @@
                     <img src="./assets/snake-food-off.svg" alt="" />
                   </p>
                 </div>
-                <button class="skip-button">skip</button>
+                <div id="skip-button-container">
+                  <button class="skip-button">skip</button>
+                </div>
               </div>
             </div>
 
