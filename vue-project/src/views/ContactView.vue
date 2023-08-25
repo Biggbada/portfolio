@@ -1,9 +1,10 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-import ContactAside from '../components/ContactAside.vue'
-import ContactSubHeader from '../components/ContactSubHeader.vue'
-import ContactForm from '../components/ContactForm.vue'
 import LayoutView from '../views/LayoutView.vue'
+import ContactSubHeader from '../components/ContactSubHeader.vue'
+import ContactAside from '../components/ContactAside.vue'
+import ContactForm from '../components/ContactForm.vue'
+import ContactCodeSnippets from '../components/ContactCodeSnippets.vue'
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import LayoutView from '../views/LayoutView.vue'
     </template>
     <template v-slot:content>
       <ContactForm />
+      <ContactCodeSnippets />
     </template>
   </LayoutView>
 </template>
