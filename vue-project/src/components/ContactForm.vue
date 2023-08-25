@@ -1,3 +1,9 @@
+<script setup>
+import {useStore} from "@/stores/store";
+
+const store = useStore()
+</script>
+
 <template>
   <div class="item-column bordered">
     <div id="contact-form-container" class="flex-row">
@@ -5,15 +11,15 @@
         <form action="">
           <div class="item-column">
             <label for="name">_name:</label>
-            <input type="text" />
+            <input v-model="store.contactForm.name" type="text" />
           </div>
           <div class="item-column">
             <label for="name">_email:</label>
-            <input type="email" />
+            <input v-model="store.contactForm.email" type="email" />
           </div>
           <div class="item-column">
             <label for="name">_message:</label>
-            <textarea name="message" id="message" cols="30" rows="10"></textarea>
+            <textarea v-model="store.contactForm.message" name="message" id="message" cols="30" rows="10"></textarea>
           </div>
         </form>
       </div>
