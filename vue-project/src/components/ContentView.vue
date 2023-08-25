@@ -1,3 +1,5 @@
 <template>
-  <main class="bordered"></main>
+  <main class="bordered">
+    <slot></slot>
+  </main>
 </template>

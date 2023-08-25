@@ -1,19 +1,16 @@
 <script setup>
-// import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
 import HeaderView from './components/HeaderView.vue'
-import LeftAsideView from './components/LeftAsideView.vue'
-import ContentView from './components/ContentView.vue'
 </script>
 
 <template>
   <HeaderView />
-  <div class="flew-row bordered">
-    <LeftAsideView />
-    <ContentView />
+  <div id="about-main-container" class="content">
+    <RouterView></RouterView>
   </div>
 </template>
 
-<!-- <template>
+<!-- <template><
   <header>
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 

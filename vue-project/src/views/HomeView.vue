@@ -1,11 +1,13 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
-import HeaderView from '../components/HeaderView.vue'
+import HomeIntro from '../components/HomeIntro.vue'
+import HomeGame from '../components/HomeGame.vue'
 </script>
 
 <template>
   <main>
-    <TheWelcome />
-    <HeaderView />
+    <div id="welcome-section" class="flex-row">
+      <HomeIntro/>
+      <HomeGame/>
+    </div>
   </main>
 </template>

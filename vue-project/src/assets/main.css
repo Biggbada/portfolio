@@ -29,6 +29,10 @@ a,
   }
 
   #app {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: start;
+    align-items: start;
     /* display: grid;
     grid-template-columns: 1fr 1fr; */
     /* padding: 0 2rem; */

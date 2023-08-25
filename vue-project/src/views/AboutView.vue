@@ -1,16 +1,26 @@
 <script setup>
 // import { RouterLink, RouterView } from 'vue-router'
-import HeaderView from '../components/HeaderView.vue'
-import LeftAsideView from '../components/LeftAsideView.vue'
-import ContentView from '../components/ContentView.vue'
+import FoldersView from '../components/FoldersView.vue'
+import SubHeader from '../components/SubHeader.vue'
+import AboutTextContent from '../components/AboutTextContent.vue'
+import AboutSnippetsView from '../components/AboutSnippetsView.vue'
+import LayoutView from '../views/LayoutView.vue'
 </script>
 
 <template>
-  <HeaderView />
-  <div class="flew-row bordered">
-    <LeftAsideView />
-    <ContentView />
-  </div>
+  <LayoutView>
+    <template v-slot:subheader>
+      <SubHeader />
+      <subheader title="Projets"></subheader>
+    </template>
+    <template v-slot:aside>
+      <FoldersView />
+    </template>
+    <template v-slot:content>
+      <AboutTextContent />
+      <AboutSnippetsView />
+    </template>
+  </LayoutView>
 </template>
 
 <!-- <style>
