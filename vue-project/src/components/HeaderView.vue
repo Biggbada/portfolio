@@ -16,7 +16,7 @@ import { RouterLink } from 'vue-router'
             <li><a href="#">_delivered</a></li>
             <li><a href="#">_pricing</a></li>
             <li><a href="#">_recent</a></li>
-            <li><a href="./contact.html">_contact</a></li>
+            <li><RouterLink to="/contact">_contact</RouterLink></li>
             <li><a href="#">_login</a></li>
           </div>
         </ul>

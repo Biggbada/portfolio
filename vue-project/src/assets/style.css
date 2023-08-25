@@ -464,14 +464,14 @@ input:checked .checkmark {
   border: 0;
 }
 #project-1-pic {
-  background-image: url(./assets/project-img-01.svg);
+  background-image: url(project-img-01.svg);
   background-size: cover;
 }
 #project-2-pic {
-  background-image: url(./assets/project-img-02.svg);
+  background-image: url(project-img-02.svg);
 }
 #project-3-pic {
-  background-image: url(./assets/project-img-03.svg);
+  background-image: url(project-img-03.svg);
 }
 .project-excerpt {
   padding: 1rem;
