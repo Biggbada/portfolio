@@ -1,52 +1,41 @@
+<script setup>
+import logo from '@/assets/logo-css.svg'
+
+const technos = [
+  {
+    id: 1,
+    name: 'html',
+    icon: logo
+  },
+  {
+    id: 2,
+    name: 'css',
+    icon: 'assets/logo-css.svg'
+  },
+  {
+    id: 3,
+    name: 'vuejs',
+    icon: './assets/logo-vue.svg'
+  },
+  {
+    id: 4,
+    name: 'react',
+    icon: './assets/logo-react.svg'
+  }
+]
+</script>
+
 <template>
-  <div id="bio-folders" class="bio-items">
+  <div id="technos-selector" class="flex-row bio-items">
     <ul>
-      <div class="flex-row-start gap-1">
+      <div v-for="techno in technos" :key="techno.id" class="flex-row-start gap-1">
         <li class="noli">
           <label for="techno">
             <input type="checkbox" name="techno" id="" />
-            <span class="checkmark">x </span>
           </label>
-          <img
-            class="centered-img"
-            src="../assets/logo-html.svg"
-            width="24"
-            height="24"
-            alt=""
-          />html
-        </li>
-      </div>
-      <div class="flex-row-start gap-1">
-        <li class="noli">
-          <label for="techno">
-            <input type="checkbox" name="techno" id="" />
-            <span class="checkmark">x </span>
-          </label>
-          <img class="centered-img" src="../assets/logo-css.svg" width="24" height="24" alt="" />css
-        </li>
-      </div>
-      <div class="flex-row-start gap-1">
-        <li class="noli">
-          <label for="techno">
-            <input type="checkbox" name="techno" id="" />
-            <span class="checkmark">x </span>
-          </label>
-          <img
-            class="centered-img"
-            src="../assets/logo-react.svg"
-            width="24"
-            height="24"
-            alt=""
-          />react
-        </li>
-      </div>
-      <div class="flex-row-start gap-1">
-        <li class="noli">
-          <label for="techno">
-            <input type="checkbox" name="techno" id="" />
-            <span class="checkmark">x </span>
-          </label>
-          <img class="centered-img" src="../assets/logo-vue.svg" width="24" height="24" alt="" />Vue
+          <img class="centered-img" v-bind:src="techno.icon" width="24" height="24" alt="" />{{
+            techno.name
+          }}
         </li>
       </div>
     </ul>

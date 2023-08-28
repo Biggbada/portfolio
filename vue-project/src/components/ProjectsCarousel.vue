@@ -1,43 +1,56 @@
+<script setup>
+const projects = [
+  {
+    id: 1,
+    title: 'projet 1',
+    type: 'ui_animations',
+    technos: ['html', 'css', 'js'],
+    excerpt: 'blablablablablablablabla',
+    content: 'blablabla',
+    cover: '/src/assets/project-img-01.svg'
+  },
+  {
+    id: 2,
+    title: 'projet 2',
+    type: 'ui_animations',
+    technos: ['html', 'css', 'js'],
+    excerpt: 'blablablablablablablabla',
+    content: 'blablabla',
+    cover: '/src/assets/project-img-02.svg'
+  },
+  {
+    id: 3,
+    title: 'projet 3',
+    type: 'ui_animations',
+    technos: ['html', 'css', 'js'],
+    excerpt: 'blablablablablablablabla',
+    content: 'blablabla',
+    cover: '/src/assets/project-img-03.svg'
+  }
+]
+</script>
+
 <template>
   <main id="about-main">
     <div id="about-content" class="flex-row-start">
-      <div id="bio-col-1" class="item-column"></div>
       <div class="item-column bordered">
         <div id="projects-container" class="flex-row">
-          <div class="project-thumb item-column">
+          <div v-for="project in projects" :key="project.id" class="project-thumb item-column">
             <div class="project-title code">
-              <span class="violet">Project 1</span> // _ui-animations
+              <span class="violet">
+                {{ project.title }}
+              </span>
+              {{ project.type }}
             </div>
             <div class="project-container">
-              <div id="project-1-pic" class="project-pic"></div>
+              <div
+                class="project-pic"
+                v-bind:style="{
+                  backgroundImage: 'url(' + project.cover + ')'
+                }"
+              ></div>
               <div class="project-excerpt code">
-                Duis aute irure dolor in velit esse cillum dolore.
-              </div>
-              <div>
-                <button class="grey-button">view-project</button>
-              </div>
-            </div>
-          </div>
-          <div class="project-thumb item-column">
-            <div class="project-title code">
-              <span class="violet">Project 2</span> // _tetris-game
-            </div>
-            <div class="project-container">
-              <div id="project-2-pic" class="project-pic"></div>
-              <div class="project-excerpt code">
-                Duis aute irure dolor in velit esse cillum dolore.
-              </div>
-              <div>
-                <button class="grey-button">view-project</button>
-              </div>
-            </div>
-          </div>
-          <div class="project-thumb item-column">
-            <div class="project-title code"><span class="violet">Project 3</span> // _ethereum</div>
-            <div class="project-container">
-              <div id="project-3-pic" class="project-pic"></div>
-              <div class="project-excerpt code">
-                Duis aute irure dolor in velit esse cillum dolore.
+                {{ project.excerpt }}
               </div>
               <div>
                 <button class="grey-button">view-project</button>

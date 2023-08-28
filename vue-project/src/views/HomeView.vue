@@ -6,8 +6,8 @@ import HomeGame from '../components/HomeGame.vue'
 <template>
   <main>
     <div id="welcome-section" class="flex-row">
-      <HomeIntro/>
-      <HomeGame/>
+      <HomeIntro />
+      <HomeGame />
     </div>
   </main>
 </template>
