@@ -1,28 +1,38 @@
 <script setup>
-import logo from '@/assets/logo-css.svg'
+import logoHtml from '@/assets/logo-html.svg'
+import logoCss from '@/assets/logo-css.svg'
+import logoVuejs from '@/assets/logo-vue.svg'
+import logoReact from '@/assets/logo-react.svg'
+import { useStore } from '@/stores/store'
+import { ref } from 'vue'
 
+// access the `store` variable anywhere in the component ✨
+const store = useStore()
+const technoSelected = store.technoSelected
 const technos = [
   {
     id: 1,
     name: 'html',
-    icon: logo
+    icon: logoHtml
   },
   {
     id: 2,
     name: 'css',
-    icon: 'assets/logo-css.svg'
+    icon: logoCss
   },
   {
     id: 3,
     name: 'vuejs',
-    icon: './assets/logo-vue.svg'
+    icon: logoVuejs
   },
   {
     id: 4,
     name: 'react',
-    icon: './assets/logo-react.svg'
+    icon: logoReact
   }
 ]
+console.log(technoSelected)
+const test = ref([])
 </script>
 
 <template>
@@ -31,7 +41,13 @@ const technos = [
       <div v-for="techno in technos" :key="techno.id" class="flex-row-start gap-1">
         <li class="noli">
           <label for="techno">
-            <input type="checkbox" name="techno" id="" />
+            <input
+              class="techno-input"
+              type="checkbox"
+              v-model="test"
+              name="techno"
+              :value="techno.name"
+            />
           </label>
           <img class="centered-img" v-bind:src="techno.icon" width="24" height="24" alt="" />{{
             techno.name

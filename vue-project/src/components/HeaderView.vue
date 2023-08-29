@@ -11,7 +11,6 @@ import { RouterLink } from 'vue-router'
             <li><RouterLink to="/">yann-guenot</RouterLink></li>
             <li><RouterLink to="/about">_about</RouterLink></li>
             <li><RouterLink to="/projects">_projects</RouterLink></li>
-            <li><a href="./projects.html"></a></li>
             <li><a href="#">_incoming</a></li>
             <li><a href="#">_delivered</a></li>
             <li><a href="#">_pricing</a></li>

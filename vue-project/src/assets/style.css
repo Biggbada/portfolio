@@ -21,6 +21,9 @@ body {
   background-position-x: 100%;
   background-position-y: 70%;
 }
+a {
+  color: inherit;
+}
 .nav-container {
   display: flex;
   flex-flow: row wrap;
@@ -31,7 +34,6 @@ body {
   position: fixed;
   width: 100vw;
   z-index: 2;
-  background-color: #011627e5;
 }
 input,
 textarea {
@@ -46,7 +48,6 @@ aside {
 #top-navbar {
   width: 100%;
   color: #607b96;
-  background-color: #011627;
 }
 #nav-row {
   width: 100vw;
@@ -264,7 +265,6 @@ h1 {
 #bottom-navbar {
   width: 100%;
   color: #607b96;
-  background-color: #011627;
   bottom: 0;
 }
 
@@ -339,7 +339,6 @@ h1 {
   width: 90vw;
   border: 1px solid #1e2d3d;
   border-radius: 0.5rem;
-  background-color: #011627;
 }
 #yann-guenot {
   width: 17vw;
@@ -355,14 +354,12 @@ h1 {
 }
 #about-main {
   box-sizing: border-box;
-  background-color: #011627;
 }
 #about-content {
   align-items: start;
 }
 #bio-personal-info {
   width: 17vw;
-  border-top: 1px solid #1e2d3d;
   border-left: 0;
   padding-left: 40px;
   box-sizing: border-box;
@@ -395,7 +392,6 @@ h1 {
   display: flex;
   flex-flow: row wrap;
   width: 40vw;
-  border: 1px solid #1e2d3d;
 }
 #personal-info-close {
   margin-left: auto;
@@ -443,20 +439,21 @@ h1 {
   flex-flow: column wrap;
   justify-content: center;
   align-items: start;
-} 
+}
 input[type='checkbox'] {
+  padding: 0.2rem;
   appearance: none;
   width: 1.5em;
   height: 1.5em;
   border-radius: 0.125rem;
-  border: 1px solid #607B96;
+  border: 1px solid #607b96;
   vertical-align: middle;
 }
 input[type='checkbox']:checked {
   width: 1.5em;
   height: 1.5em;
-  background-color: #607B96;
-  border: 1px solid #607B96;
+  background-color: #607b96;
+  border: 1px solid #607b96;
   content: url(./check-icon.svg);
 }
 

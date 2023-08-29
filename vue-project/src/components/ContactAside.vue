@@ -11,13 +11,8 @@
         />yguenot@polepo.fr
       </div>
       <div class="contacts-items">
-        <img
-          class="centered-img"
-          src="../assets/phone-icon.svg"
-          width="17"
-          height="17"
-          alt=""
-        />+33.7.82.83.38.68.
+        <img class="centered-img" src="../assets/phone-icon.svg" width="17" height="17" alt="" />
+        <a href="tel:+33.7.82.83.38.68."> +33.7.82.83.38.68.</a>
       </div>
     </div>
   </div>

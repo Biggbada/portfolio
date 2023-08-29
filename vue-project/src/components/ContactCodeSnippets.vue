@@ -21,16 +21,16 @@ const message = { name:'`
       <span class="pink">const </span><span class="violet">message</span
       ><span class="pink"> =</span> { <span class="violet">name</span>:
       <span v-if="!store.contactForm.name" class="orange">
-        undefined {{ store.contactForm.name }}</span
+        John_Doe {{ store.contactForm.name }}</span
       >
       <span v-else class="orange"> {{ store.contactForm.name }}</span
       >, <span class="violet"> email</span>:
       <span v-if="!store.contactForm.email" class="orange">
-        null {{ store.contactForm.email }}</span
+        mail@example.com {{ store.contactForm.email }}</span
       >
       <span v-else class="orange"> {{ store.contactForm.email }}</span
       >, <span class="violet">message</span>:
-      <span class="orange"> {{ store.contactForm.message }}</span
+      <span class="orange"> Hi, I love your website, I hire you ! {{ store.contactForm.message }}</span
       >, date: <span class="orange"> {{ ajd }}</span> }<br />
       <span class="violet">button.addEventListener</span>( <span class="orange">'click'</span>, ()
       <span class="pink">=&gt;</span> {<br />

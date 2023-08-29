@@ -1,33 +1,9 @@
 <script setup>
-const projects = [
-  {
-    id: 1,
-    title: 'projet 1',
-    type: 'ui_animations',
-    technos: ['html', 'css', 'js'],
-    excerpt: 'blablablablablablablabla',
-    content: 'blablabla',
-    cover: '/src/assets/project-img-01.svg'
-  },
-  {
-    id: 2,
-    title: 'projet 2',
-    type: 'ui_animations',
-    technos: ['html', 'css', 'js'],
-    excerpt: 'blablablablablablablabla',
-    content: 'blablabla',
-    cover: '/src/assets/project-img-02.svg'
-  },
-  {
-    id: 3,
-    title: 'projet 3',
-    type: 'ui_animations',
-    technos: ['html', 'css', 'js'],
-    excerpt: 'blablablablablablablabla',
-    content: 'blablabla',
-    cover: '/src/assets/project-img-03.svg'
-  }
-]
+import { useStore } from '@/stores/store'
+
+// access the `store` variable anywhere in the component ✨
+const store = useStore()
+const projects = store.projects
 </script>
 
 <template>
@@ -40,7 +16,7 @@ const projects = [
               <span class="violet">
                 {{ project.title }}
               </span>
-              {{ project.type }}
+              //{{ project.type }}
             </div>
             <div class="project-container">
               <div
