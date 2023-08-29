@@ -3,16 +3,16 @@
     <p class="code">// Code snippet showcase:</p>
     <div class="flex-row">
       <div class="item-column">
-        <img src="../assets/user-image.svg" width="50" height="50" alt="" />
+        <img src="//assets/user-image.svg" width="50" height="50" alt="" />
       </div>
       <div class="item-column">
         <p class="thin-para violet" id="about-username">@username</p>
         <p class="thin-para" id="about-created-at">Created 5 months ago</p>
       </div>
       <div class="flex-row">
-        <img src="../assets/comments-icon.svg" width="20" height="20" alt="" />
+        <img src="//assets/comments-icon.svg" width="20" height="20" alt="" />
         <span>details</span>
-        <img src="../assets/star.svg" alt="" />
+        <img src="//assets/star.svg" alt="" />
         <span>3 stars</span>
       </div>
     </div>
@@ -37,16 +37,16 @@
     </div>
     <div class="flex-row">
       <div class="item-column">
-        <img src="../assets/user-image.svg" width="50" height="50" alt="" />
+        <img src="//assets/user-image.svg" width="50" height="50" alt="" />
       </div>
       <div class="item-column">
         <p class="thin-para violet" id="about-username">@username</p>
         <p class="thin-para" id="about-created-at">Created 5 months ago</p>
       </div>
       <div class="flex-row">
-        <img src="../assets/comments-icon.svg" width="20" height="20" alt="" />
+        <img src="//assets/comments-icon.svg" width="20" height="20" alt="" />
         <span>details</span>
-        <img src="../assets/star.svg" alt="" />
+        <img src="//assets/star.svg" alt="" />
         <span>3 stars</span>
       </div>
     </div>

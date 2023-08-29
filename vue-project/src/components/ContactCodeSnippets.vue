@@ -3,19 +3,17 @@ import { useStore } from '@/stores/store'
 import { computed } from 'vue'
 // Using ES6 import syntax
 const store = useStore()
-const today = new Date()
-const ajd = today.toLocaleString()
+const dateString = store.today
+
 const contactForm = store.contactForm
-console.log(contactForm)
-console.log(contactForm.name)
 const js1 = computed(() => {
   return `
 const button = document.querySelector('#sendBtn');
-const message = { 
-  name: '${contactForm.name}', 
-  email: '${contactForm.email}', 
-  message: '${contactForm.message}', 
-  date: ${ajd} 
+const message = {
+  name: '${contactForm.name}',
+  email: '${contactForm.email}',
+  message: '${contactForm.message}',
+  date: '${dateString}'
   }
 button.addEventListener( 'click', () => {
   form.send(message);

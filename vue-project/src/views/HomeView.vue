@@ -4,7 +4,7 @@ import HomeGame from '../components/HomeGame.vue'
 </script>
 
 <template>
-  <main>
+  <main id="homepage">
     <div id="welcome-section" class="flex-row">
       <HomeIntro />
       <HomeGame />

@@ -16,7 +16,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Fira Code', monospace;
-  background-image: url('/src/assets/bg-colors.svg');
+  background-image: url('/assets/bg-colors.svg');
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 70%;
@@ -102,7 +102,7 @@ aside {
   padding-right: 5rem;
   box-sizing: border-box;
 }
-main {
+#homepage {
   width: 100%;
 }
 #welcome-section {
@@ -453,6 +453,7 @@ h1 {
   flex-flow: column wrap;
   justify-content: center;
   align-items: start;
+  width: 14vw;
 }
 input[type='checkbox'] {
   padding: 0.2rem;
@@ -468,13 +469,16 @@ input[type='checkbox']:checked {
   height: 1.5em;
   background-color: #607b96;
   border: 1px solid #607b96;
-  content: url(./check-icon.svg);
+  content: url(/assets/check-icon.svg);
 }
 
 #projects-container {
   gap: 1rem;
   padding: 1rem;
   box-sizing: border-box;
+  justify-content: start;
+  align-items: start;
+  width: 75vw;
 }
 .project-container {
   max-width: 22vw;
@@ -487,18 +491,8 @@ input[type='checkbox']:checked {
   height: 9rem;
   border-radius: 15px 15px 0 0;
   border: 0;
-  background-position: 10%;
 }
-#project-1-pic {
-  background-image: url(project-img-01.svg);
-  background-size: cover;
-}
-#project-2-pic {
-  background-image: url(project-img-02.svg);
-}
-#project-3-pic {
-  background-image: url(project-img-03.svg);
-}
+
 .project-excerpt {
   padding: 1rem;
 }

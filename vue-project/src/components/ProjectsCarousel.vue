@@ -32,7 +32,9 @@ const store = useStore()
                 {{ project.excerpt }}
               </div>
               <div>
-                <button class="grey-button">view-project</button>
+                <a target="blank" v-bind:href="project.git">
+                  <button class="grey-button">view-project</button>
+                </a>
               </div>
             </div>
           </div>
