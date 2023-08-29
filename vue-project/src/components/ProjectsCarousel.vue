@@ -1,9 +1,8 @@
 <script setup>
-import { useStore } from '@/stores/store'
+import {useStore} from '@/stores/store'
 
 // access the `store` variable anywhere in the component ✨
 const store = useStore()
-const projects = store.projects
 </script>
 
 <template>
@@ -11,7 +10,7 @@ const projects = store.projects
     <div id="about-content" class="flex-row-start">
       <div class="item-column bordered">
         <div id="projects-container" class="flex-row">
-          <div v-for="project in projects" :key="project.id" class="project-thumb item-column">
+          <div v-for="project in store.filteredProjects" :key="project.id" class="project-thumb item-column">
             <div class="project-title code">
               <span class="violet">
                 {{ project.title }}
@@ -20,8 +19,8 @@ const projects = store.projects
             </div>
             <div class="project-container">
               <div
-                class="project-pic"
-                v-bind:style="{
+                  class="project-pic"
+                  v-bind:style="{
                   backgroundImage: 'url(' + project.cover + ')'
                 }"
               ></div>
