@@ -6,8 +6,11 @@
   /* padding: 2rem; */
 
   font-weight: normal;
-  position: fixed;
+  position: absolute;
   top: 50px;
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
 }
 
 a,

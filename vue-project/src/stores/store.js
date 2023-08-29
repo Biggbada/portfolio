@@ -104,9 +104,9 @@ export const useStore = defineStore('store', () => {
     }
   ]
   const contactForm = ref({
-    name: null,
-    email: null,
-    message: null
+    name: undefined,
+    email: undefined,
+    message: undefined
   })
   const today = ref(new Date().toLocaleString())
   let technoSelected = ref(['html', 'css', 'react', 'vuejs'])

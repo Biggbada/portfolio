@@ -9,7 +9,7 @@
       <p>// welcome to my website</p>
       <p>// you can also follow my Github page</p>
       <p>
-        <span id="const">const</span>
+        <span id="const">const </span>
         <span id="gitlink">githubLink </span>
         <span> = </span>
         <span id="link"

@@ -8,6 +8,7 @@ const dateString = store.today
 const contactForm = store.contactForm
 const js1 = computed(() => {
   return `
+//  Send me a message, I'll go back to you soon  
 const button = document.querySelector('#sendBtn');
 const message = {
   name: '${contactForm.name}',

@@ -414,6 +414,18 @@ h1 {
   color: #607b96;
   font-size: 1.125rem;
 }
+.hljs {
+  font-family: 'Fira Code', monospace;
+} 
+#contact-form-displayer .hljs-keyword {
+  color: #c98bdf;
+} 
+#contact-form-displayer .hljs-string {
+  color: #fea55f;
+} 
+#contact-form-displayer .hljs-attr {
+  color: #43d9ad;
+}
 .thin-para {
   margin: 0;
 }
@@ -479,6 +491,7 @@ input[type='checkbox']:checked {
   justify-content: start;
   align-items: start;
   width: 75vw;
+  min-height: 50vh;
 }
 .project-container {
   max-width: 22vw;
@@ -567,6 +580,29 @@ input[type='checkbox']:checked {
   color: #c98bdf;
 }
 #contact-form-displayer {
+  font-family: 'Fira Code', monospace;
   width: 29vw;
   padding: 1rem;
 }
+
+/*mobile css */
+@media (max-width: 500px) {
+
+  #top-navbar li {
+    float: inline-start;
+  }
+  #top-navbar li:first-of-type {
+    width: auto;
+  }
+  #welcome-right {
+    display: none;
+  }
+  #welcome-section {
+    height: auto;
+  }
+  #welcome-left {
+    text-align: left;
+    width: auto;
+    padding-left: 2rem;
+  }
+  }
