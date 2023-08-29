@@ -39,6 +39,15 @@ input,
 textarea {
   color: #fff;
 }
+#contact-form-container input.error {
+  outline: 2px solid #e99287;
+  color: #607b96;
+  box-shadow: none;
+}
+#contact-form-container textarea.error {
+  outline: 2px solid #e99287;
+  box-shadow: none;
+}
 aside {
   align-items: start;
 }
@@ -93,8 +102,12 @@ aside {
   padding-right: 5rem;
   box-sizing: border-box;
 }
+main {
+  width: 100%;
+}
 #welcome-section {
   height: 80vh;
+  width: 100%;
 }
 #welcome-text {
   color: #607b96;
@@ -143,6 +156,7 @@ h1 {
 #welcome-left {
   text-align: left;
   width: 50%;
+  padding-left: 4rem;
 }
 #welcome-right {
   width: 50%;
