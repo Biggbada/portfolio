@@ -1,41 +1,34 @@
 <script setup>
 import { useStore } from '@/stores/store'
+import { computed } from 'vue';
 // Using ES6 import syntax
-
+const store = useStore();
 const today = new Date();
 const ajd = today.toLocaleString();
+const contactForm = store.contactForm;
+console.log(contactForm);
+console.log(contactForm.name);
+const js1 = computed(() => {
+  return `
+const button = document.querySelector('#sendBtn');
+const message = { 
+  name: '${contactForm.name}', 
+  email: '${contactForm.mail}', 
+  message: '${contactForm.message}', 
+  date: ${ajd} 
+  }
+button.addEventListener( 'click', () => {
+  form.send(message);
+}
 const store = useStore()
-const js1 = `const button = document.querySelector('#sendBtn');
-const message = { name:'`
+)`
+})
 </script>
 
 <template>
   <div id="contact-form-displayer" class="item-column bordered">
     <p>
     <pre v-highlightjs="js1"><code class="javascript"></code></pre>
-      <span class="pink">const </span>
-      <span class="violet">button </span>
-      <span class="pink">=</span>
-      <span class="violet"> document.querySelector</span>(<span class="orange">'#sendBtn'</span
-      >);<br />
-      <span class="pink">const </span><span class="violet">message</span
-      ><span class="pink"> =</span> { <span class="violet">name</span>:
-      <span v-if="!store.contactForm.name" class="orange">
-        John_Doe {{ store.contactForm.name }}</span
-      >
-      <span v-else class="orange"> {{ store.contactForm.name }}</span
-      >, <span class="violet"> email</span>:
-      <span v-if="!store.contactForm.email" class="orange">
-        mail@example.com {{ store.contactForm.email }}</span
-      >
-      <span v-else class="orange"> {{ store.contactForm.email }}</span
-      >, <span class="violet">message</span>:
-      <span class="orange"> Hi, I love your website, I hire you ! {{ store.contactForm.message }}</span
-      >, date: <span class="orange"> {{ ajd }}</span> }<br />
-      <span class="violet">button.addEventListener</span>( <span class="orange">'click'</span>, ()
-      <span class="pink">=&gt;</span> {<br />
-      <span class="violet">form.send</span>(<span class="violet">message</span>);<br />
-      }<br />)
     </p>
   </div>
 </template>

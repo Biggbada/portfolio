@@ -1,17 +1,34 @@
 import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
-
+import logoHtml from '@/assets/logo-html.svg'
+import logoCss from '@/assets/logo-css.svg'
+import logoVuejs from '@/assets/logo-vue.svg'
+import logoReact from '@/assets/logo-react.svg'
 export const useStore = defineStore('store', () => {
-  const contactForm = ref({
-    name: null,
-    email: null,
-    message: null
-  })
-
-  let technoSelected = ref([])
-
-  const projects = ref([
-  {
+  const technos = [
+    {
+      id: 1,
+      name: 'html',
+      icon: logoHtml
+    },
+    {
+      id: 2,
+      name: 'css',
+      icon: logoCss
+    },
+    {
+      id: 3,
+      name: 'vuejs',
+      icon: logoVuejs
+    },
+    {
+      id: 4,
+      name: 'react',
+      icon: logoReact
+    }
+  ]
+  const projects = [
+    {
     id: 1,
     title: 'projet 1',
     type: 'ui_animations',
@@ -38,9 +55,27 @@ export const useStore = defineStore('store', () => {
     content: 'blablabla',
     cover: '/src/assets/project-img-03.svg'
   }
-])
+]
+const contactForm = ref({
+  name: null,
+  email: null,
+  message: null
+})
+  
+  let technoSelected = ref([
+        "html", "css", "react", "vuejs"
+    ])
+const filteredProjects = computed(() => {
+        return projects.filter((projet) => {
+            let isIncluded = false;
+            for (const selected of technoSelected.value) {
+                if (projet.technos.map(item => item.toLowerCase()).includes(selected.toLowerCase())) {
+                    isIncluded = true;
+                }
+            }
+            return isIncluded;
+        })
+    })
 
-const filteredProjects = computed(() => {})
-
-  return { contactForm, technoSelected, projects }
+    return {contactForm, technoSelected, projects, filteredProjects, technos}
 })
