@@ -4,9 +4,11 @@ import HeaderView from './components/HeaderView.vue'
 </script>
 
 <template>
-  <HeaderView />
-  <div id="about-main-container" class="content">
-    <RouterView></RouterView>
+  <div>
+    <HeaderView />
+    <div id="about-main-container" class="content">
+      <RouterView></RouterView>
+    </div>
   </div>
 </template>
 

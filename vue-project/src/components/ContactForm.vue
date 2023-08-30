@@ -1,44 +1,58 @@
 <script setup>
 import { useStore } from '@/stores/store'
-import { onMounted } from 'vue'
+import emailjs from 'emailjs-com'
+import { reactive, ref } from 'vue'
 
 const store = useStore()
-onMounted(() => {
-  const inputs = document.querySelectorAll('.contact-input')
-  console.log(inputs)
-  const contactForm = document.querySelector('form')
-  console.log(contactForm)
-  const textarea = document.querySelector('textarea')
-  console.log(textarea)
-  const errorMsg = ' can not be blank'
-  contactForm.addEventListener('submit', (e) => {
-    if (textarea.value == '') {
-      textarea.classList.add('error')
-      textarea.placeholder = textarea.name + errorMsg
-    } else {
-      textarea.classList.remove('error')
-    }
-    inputs.forEach((input) => {
-      if (input.value == '') {
-        e.preventDefault()
-        input.classList.add('error')
-        input.placeholder = input.name + errorMsg
-      } else {
-        input.classList.remove('error')
-      }
-    })
-  })
+const form = ref(null)
+const settingTextearea = reactive({
+  isError: false,
+  placeholder: ''
 })
+const sendMail = () => {
+  let isError = false
+  const contactFormStatus = document.querySelector('#contact-form-status')
+  contactFormStatus.className = ''
+  console.log(store.contactForm.message)
+  if (store.contactForm.message == undefined || store.contactForm.message == '') {
+    settingTextearea.isError = isError = true
+    settingTextearea.placeholder = 'Message can not be blank'
+  } else {
+    settingTextearea.isError = false
+    settingTextearea.placeholder = ''
+  }
+
+  if (!isError) {
+    emailjs.sendForm('service_ejcepws', 'template_xiv62ks', form.value, 'zenfkgMGV-PfC2A69').then(
+      () => {
+        contactFormStatus.textContent = 'Message sent!'
+        contactFormStatus.classList.add('valid')
+        store.resetContactForm()
+      },
+      (error) => {
+        console.log(error)
+        contactFormStatus.classList.add('error')
+        contactFormStatus.textContent = 'Message not sent, please try again'
+      }
+    )
+  }
+}
 </script>
 
 <template>
   <div class="item-column bordered">
     <div id="contact-form-container" class="flex-row">
       <div class="item-column">
-        <form action="">
+        <form @submit.prevent="sendMail" class="form" ref="form" action="">
           <div class="item-column">
             <label for="name">_name:</label>
-            <input name="name" class="contact-input" v-model="store.contactForm.name" type="text" />
+            <input
+              name="name"
+              place
+              class="contact-input"
+              v-model="store.contactForm.name"
+              type="text"
+            />
           </div>
           <div class="item-column">
             <label for="name">_email:</label>
@@ -53,6 +67,8 @@ onMounted(() => {
             <label name="message" for="name">_message:</label>
             <textarea
               v-model="store.contactForm.message"
+              :placeholder="settingTextearea.placeholder"
+              :class="{ error: settingTextearea.isError }"
               name="message"
               id="message"
               cols="30"
@@ -61,6 +77,7 @@ onMounted(() => {
           </div>
           <div class="item-column">
             <input class="contact-input" type="submit" id="submit-btn" value="Send(message)" />
+            <p id="contact-form-status"></p>
           </div>
         </form>
       </div>

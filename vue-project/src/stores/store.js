@@ -103,11 +103,14 @@ export const useStore = defineStore('store', () => {
       cover: project3YannCover
     }
   ]
-  const contactForm = ref({
+  const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
+  const contactFormVide = {
     name: undefined,
     email: undefined,
     message: undefined
-  })
+  }
+  const contactForm = ref(contactFormVide)
+
   const today = ref(new Date().toLocaleString())
   let technoSelected = ref(['html', 'css', 'react', 'vuejs'])
   const filteredProjects = computed(() => {
@@ -122,5 +125,20 @@ export const useStore = defineStore('store', () => {
     })
   })
 
-  return { contactForm, technoSelected, projects, filteredProjects, technos, today }
+  const resetContactForm = () => {
+    contactForm.value.email = undefined
+    contactForm.value.message = undefined
+    contactForm.value.name = undefined
+  }
+
+  return {
+    contactForm,
+    technoSelected,
+    projects,
+    filteredProjects,
+    technos,
+    today,
+    resetContactForm,
+    mql
+  }
 })
