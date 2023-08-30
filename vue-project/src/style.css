@@ -587,7 +587,9 @@ input[type='checkbox']:checked {
 
 /*mobile css */
 @media (max-width: 500px) {
-
+  #top-navbar li:first-of-type::before {
+  content: url(/assets/menu-icon.svg);
+  }
   #top-navbar li {
     float: inline-start;
   }
@@ -605,4 +607,10 @@ input[type='checkbox']:checked {
     width: auto;
     padding-left: 2rem;
   }
+    .hljs {
+      text-wrap: wrap;
+    }
+        #about-main-container {
+          width: auto;
+        }
   }

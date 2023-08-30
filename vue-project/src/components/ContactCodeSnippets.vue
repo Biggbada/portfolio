@@ -18,9 +18,7 @@ const message = {
   }
 button.addEventListener( 'click', () => {
   form.send(message);
-}
-const store = useStore()
-)`
+})`
 })
 </script>
 
