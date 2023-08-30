@@ -1,86 +1,142 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
-@media (max-width: 500px) {
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+
+  @media (max-width: 500px) {
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+  
+      #app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        vertical-align: middle;
+        position: initial;
+      }
+  
+      #navbar-container {
+        flex-flow: column wrap;
+      }
+  
+      #top-navbar a {
+        color: #43d9ad;
+        font-size: .9rem;
+      }
+  
+      #top-navbar li {
+        float: inline-start;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #607b96;
+        display: block;
+      }
+  
+      #top-navbar #menu-login {
+        margin-left: none !important;
+      }
+  
+      #top-navbar li:first-of-type {
+        width: auto;
+        height: 100px;
+      }
+  
+  
+      #menu-login li {
+        margin-left: none !important;
+      }
+  
+      #welcome-right {
+        display: none;
+      }
+  
+      #welcome-section {
+        height: auto;
+      }
+  
+      #welcome-left {
+        text-align: left;
+        width: auto;
+        padding-left: 2rem;
+      }
+  
+      .hljs {
+        text-wrap: wrap;
+      }
+  
+      #about-main-container {
+        width: auto;
+      }
+  
+      .bm-burger-button {
+        position: fixed;
+        width: 36px;
+        height: 30px;
+        left: 36px;
+        top: 36px;
+        cursor: pointer;
+        color: #607b96;
+      }
+  
+      .bm-burger-button .bm-burger-bars {
+        background-color: #607b96;
+      }
+      #about-top-bar #bio-personal-info {
+        width: fit-content;
+        padding-left: 10px;
+      }
+      #about-top-bar #about-nav {
+        width: fit-content;
+      }
+      #over-snippet-bar {
+        width: 10vw;
+      }
+      #personal-info-close {
+        box-sizing: border-box;
+        padding-left: 1rem;
+        margin-right: 10px;
+      }
+      #bio-folders {
+        display: none;
+      }
+      #bio-col-3 {
+        display: none;
+      }
+      #about-desription {
+        padding: 2rem 1rem 2rem 1rem;
+        box-sizing: border-box;
+      }
+      #about-desription #bio-col-2 {
+        width: 100vw;
+      }
+      #about-top-bar {
+        margin-top: 18vw;
+      }
+      #about-desription #technos-selector {
+        display: none;
+      }
+      #projects-container {
+        flex-flow: column wrap;
+      }
+      .item-column #projects-container {
+        width: auto;
+      }
+      .project-pic {
+        width: 300px;
+      }
+      .project-thumb {
+        max-width: 100%;
+      }
+      
+      #projects-container .project-container{
+        max-width: 100%;
+
+      }
+
     }
 
-    #app {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      vertical-align: middle;
-      position: initial;
-    }
-
-    #navbar-container {
-      flex-flow: column wrap;
-    }
-
-    #top-navbar a {
-      color: #43d9ad;
-      font-size: .9rem;
-    }
-
-    #top-navbar li {
-      float: inline-start;
-      border-left: none;
-      border-right: none;
-      border-bottom: 1px solid #607b96;
-      display: block;
-    }
-
-    #top-navbar #menu-login {
-      margin-left: none !important;
-    }
-
-    #top-navbar li:first-of-type {
-      width: auto;
-    }
-
-    #menu-login li {
-      margin-left: none !important;
-    }
-
-    #welcome-right {
-      display: none;
-    }
-
-    #welcome-section {
-      height: auto;
-    }
-
-    #welcome-left {
-      text-align: left;
-      width: auto;
-      padding-left: 2rem;
-    }
-
-    .hljs {
-      text-wrap: wrap;
-    }
-
-    #about-main-container {
-      width: auto;
-    }
-
-    .bm-burger-button {
-      position: fixed;
-      width: 36px;
-      height: 30px;
-      left: 36px;
-      top: 36px;
-      cursor: pointer;
-      color: #607b96;
-    }
-
-    .bm-burger-button .bm-burger-bars {
-      background-color: #607b96;
-    }
-  }
     @media (min-width: 500px) {
   h1,
   h2,
@@ -168,6 +224,11 @@ aside {
 
 #top-navbar a:active {
   color: #e5e9f0;
+}
+
+#top-navbar .bm-menu {
+  background-color: #011627;
+  border-right: 1px solid #607b96;
 }
 
 #top-navbar ul {
@@ -834,4 +895,5 @@ input[type='checkbox']:checked {
     background-color: #607b96;
   }
 }
+
 }
