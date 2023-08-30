@@ -1,6 +1,87 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
+@media (max-width: 500px) {
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #app {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      vertical-align: middle;
+      position: initial;
+    }
+
+    #navbar-container {
+      flex-flow: column wrap;
+    }
+
+    #top-navbar a {
+      color: #43d9ad;
+      font-size: .9rem;
+    }
+
+    #top-navbar li {
+      float: inline-start;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid #607b96;
+      display: block;
+    }
+
+    #top-navbar #menu-login {
+      margin-left: none !important;
+    }
+
+    #top-navbar li:first-of-type {
+      width: auto;
+    }
+
+    #menu-login li {
+      margin-left: none !important;
+    }
+
+    #welcome-right {
+      display: none;
+    }
+
+    #welcome-section {
+      height: auto;
+    }
+
+    #welcome-left {
+      text-align: left;
+      width: auto;
+      padding-left: 2rem;
+    }
+
+    .hljs {
+      text-wrap: wrap;
+    }
+
+    #about-main-container {
+      width: auto;
+    }
+
+    .bm-burger-button {
+      position: fixed;
+      width: 36px;
+      height: 30px;
+      left: 36px;
+      top: 36px;
+      cursor: pointer;
+      color: #607b96;
+    }
+
+    .bm-burger-button .bm-burger-bars {
+      background-color: #607b96;
+    }
+  }
+    @media (min-width: 500px) {
   h1,
   h2,
   h3,
@@ -9,6 +90,7 @@
     font-family: 'Fira Code VF', monospace;
   }
 }
+
 body {
   background-color: #010c15;
   color: #e5e9f0;
@@ -21,9 +103,11 @@ body {
   background-position-x: 100%;
   background-position-y: 70%;
 }
+
 a {
   color: inherit;
 }
+
 .nav-container {
   display: flex;
   flex-flow: row wrap;
@@ -35,50 +119,63 @@ a {
   width: 100vw;
   z-index: 2;
 }
+
 input,
 textarea {
   color: #fff;
 }
+
 #contact-form-container input.error {
   outline: 2px solid #e99287;
   color: #607b96;
   box-shadow: none;
 }
+
 #contact-form-container textarea.error {
   outline: 2px solid #e99287;
   box-shadow: none;
 }
+
 aside {
   align-items: start;
 }
+
 #top-nav-container {
   top: 0;
 }
+
 #top-navbar {
   width: 100%;
   color: #607b96;
 }
+
 #nav-row {
   width: 100vw;
 }
+
 #top-navbar a {
   color: #607b96;
   text-decoration: none;
 }
+
 #top-navbar a:active {
   color: #e5e9f0;
 }
+
 #top-navbar a:hover {
   color: #e5e9f0;
 }
+
 #top-navbar a:active {
   color: #e5e9f0;
 }
+
 #top-navbar ul {
   padding-inline-start: 0;
   box-sizing: border-box;
   margin: 0;
 }
+
 #top-navbar li {
   float: left;
   padding: 1rem 1.5rem 1rem 1.5rem;
@@ -87,31 +184,37 @@ aside {
   border-right: 1px solid #1e2d3d;
   list-style: none;
 }
+
 #top-navbar li:first-of-type {
   border-left: 0;
   box-sizing: border-box;
   width: 17vw;
 }
+
 #top-navbar li:last-of-type {
   border-right: 0;
-  margin-left: auto;
 }
+
 #home-main {
   margin-top: 5rem;
   padding-left: 5rem;
   padding-right: 5rem;
   box-sizing: border-box;
 }
+
 #homepage {
   width: 100%;
 }
+
 #welcome-section {
   height: 80vh;
   width: 100%;
 }
+
 #welcome-text {
   color: #607b96;
 }
+
 h1 {
   font-size: 2.5rem;
   margin: 0rem;
@@ -123,28 +226,34 @@ h1 {
   justify-content: center;
   align-items: center;
 }
+
 .flex-row-start {
   display: flex;
   flex-flow: row wrap;
   justify-content: start;
   align-items: start;
 }
+
 .gap-1 {
   gap: 1rem;
   margin-bottom: 1rem;
 }
+
 .centered-img {
   vertical-align: middle;
   margin-left: 0.5rem;
   margin-right: 0.5rem;
 }
+
 .item-column {
   display: flex;
   flex-flow: column wrap;
 }
+
 .bordered {
   border: 1px solid #1e2d3d;
 }
+
 #full-stack-title {
   color: #4d5bce;
   font-size: 2rem;
@@ -153,27 +262,34 @@ h1 {
   line-height: auto;
   margin: 0;
 }
+
 #welcome-left {
   text-align: left;
   width: 50%;
   padding-left: 4rem;
 }
+
 #welcome-right {
   width: 50%;
 }
+
 #welcome {
   margin: 0.5rem 0 0.5rem 0;
 }
+
 #const {
   color: #4d5bce;
 }
+
 #gitlink {
   color: #43d9ad;
 }
+
 #link a {
   color: #e99287;
   text-decoration: none;
 }
+
 #metal-block {
   border-radius: 0.5rem;
   border: 1px solid #0c1616;
@@ -184,10 +300,12 @@ h1 {
   height: 31rem;
   gap: 2rem;
 }
+
 #metal-block-content {
   justify-content: space-between;
   align-items: start;
 }
+
 .yellow-button {
   display: inline-flex;
   padding: 0.625rem 0.875rem;
@@ -204,6 +322,7 @@ h1 {
   font-weight: 450;
   line-height: normal;
 }
+
 #metal-block-content-left {
   display: flex;
   flex-flow: column wrap;
@@ -217,6 +336,7 @@ h1 {
   box-shadow: 1px 5px 11px 0px rgba(2, 18, 27, 0.71) inset;
   margin-left: 2rem;
 }
+
 #metal-block-content-right {
   width: 11rem;
   display: flex;
@@ -227,17 +347,20 @@ h1 {
   flex-shrink: 0;
   margin-right: 2rem;
 }
+
 #commands-container {
   border-radius: 0.5rem;
   background: rgba(1, 20, 35, 0.19);
   padding: 0.7rem;
 }
+
 #game-instructions {
   font-size: 0.875rem;
   font-style: normal;
   font-weight: 450;
   line-height: normal;
 }
+
 .home-blur {
   fill: #4d5bce;
   opacity: 0.4;
@@ -249,33 +372,41 @@ h1 {
   flex-flow: row wrap;
   width: 100%;
 }
+
 #bolt-up-left {
   margin: 0.5rem auto 0.5rem 0.5rem;
 }
+
 #bolt-up-right {
   margin: 0.5rem 0.5rem 0.5rem auto;
 }
+
 #metal-block-bottom {
   margin-top: auto;
   display: flex;
   flex-flow: row wrap;
   width: 100%;
 }
+
 #food-left {
   margin-top: 2rem;
 }
+
 #snake-food {
   width: 10rem;
 }
+
 #skip-button-container {
   display: flex;
   flex-flow: row wrap;
   justify-content: end;
   align-items: end;
 }
+
 #bottom-nav-container {
   bottom: 0;
 }
+
 #bottom-navbar {
   width: 100%;
   color: #607b96;
@@ -328,12 +459,15 @@ h1 {
   border-right: 0;
   margin-left: auto;
 }
+
 .noli {
   list-style: none;
 }
+
 #git-link:visited {
   color: #e5e9f0;
 }
+
 #central-footer-li {
   min-height: 5vh;
   padding: 0;
@@ -354,33 +488,41 @@ h1 {
   border: 1px solid #1e2d3d;
   border-radius: 0.5rem;
 }
+
 #yann-guenot {
   width: 17vw;
 }
+
 #about-top-bar div {
   height: 3.125rem;
   align-items: center;
   border-bottom: 1px solid #1e2d3d;
 }
+
 #over-snippet-bar {
   width: 30vw;
   border: 1px solid #1e2d3d;
 }
+
 #about-main {
   box-sizing: border-box;
 }
+
 #about-content {
   align-items: start;
 }
+
 #bio-personal-info {
   width: 17vw;
   border-left: 0;
   padding-left: 40px;
   box-sizing: border-box;
 }
+
 #bio-contacts {
   padding-left: 40px;
 }
+
 #left-aside-container {
   width: 17vw;
   border-top: 1px solid #1e2d3d;
@@ -388,13 +530,16 @@ h1 {
   padding: 1rem;
   box-sizing: border-box;
 }
+
 #bio-col-2 {
   width: 30vw;
 }
+
 #bio-col-3 {
   width: 30vw;
   color: #607b96;
 }
+
 .bio-items {
   display: flex;
   flex-flow: column wrap;
@@ -402,54 +547,70 @@ h1 {
   align-items: start;
   width: 20vw;
 }
+
 #about-nav {
   display: flex;
   flex-flow: row wrap;
   width: 40vw;
 }
+
 #personal-info-close {
   margin-left: auto;
 }
+
 .code {
   color: #607b96;
   font-size: 1.125rem;
 }
+
 .hljs {
   font-family: 'Fira Code', monospace;
-} 
+}
+
 #contact-form-displayer .hljs-keyword {
   color: #c98bdf;
-} 
+}
+
 #contact-form-displayer .hljs-string {
   color: #fea55f;
-} 
+}
+
 #contact-form-displayer .hljs-attr {
   color: #43d9ad;
 }
+
 .thin-para {
   margin: 0;
 }
+
 .violet {
   color: #5565e8;
 }
+
 .salmon {
   color: #e99287;
 }
+
 .pink {
   color: #c98bdf;
 }
+
 .orange {
   color: #fea55f;
 }
+
 .green {
   color: #43d9ad;
 }
+
 #about-username {
   font-size: 0.875rem;
 }
+
 #about-created-at {
   font-size: 0.75rem;
 }
+
 .about-code-block {
   border-radius: 0.9375rem;
   border: 1px solid #1e2d3d;
@@ -467,6 +628,7 @@ h1 {
   align-items: start;
   width: 14vw;
 }
+
 input[type='checkbox'] {
   padding: 0.2rem;
   appearance: none;
@@ -476,6 +638,7 @@ input[type='checkbox'] {
   border: 1px solid #607b96;
   vertical-align: middle;
 }
+
 input[type='checkbox']:checked {
   width: 1.5em;
   height: 1.5em;
@@ -493,6 +656,7 @@ input[type='checkbox']:checked {
   width: 75vw;
   min-height: 50vh;
 }
+
 .project-container {
   max-width: 22vw;
   background: #011221;
@@ -500,6 +664,7 @@ input[type='checkbox']:checked {
   border: 1px solid #1e2d3d;
   border-radius: 15px 15px 15px 15px;
 }
+
 .project-pic {
   height: 9rem;
   border-radius: 15px 15px 0 0;
@@ -509,6 +674,7 @@ input[type='checkbox']:checked {
 .project-excerpt {
   padding: 1rem;
 }
+
 .grey-button {
   display: inline-flex;
   padding: 0.625rem 0.875rem;
@@ -528,6 +694,7 @@ input[type='checkbox']:checked {
   margin-left: 1.94rem;
   margin-bottom: 1.97rem;
 }
+
 .skip-button {
   display: inline-flex;
   padding: 0.625rem 0.875rem;
@@ -546,14 +713,17 @@ input[type='checkbox']:checked {
   margin-bottom: 1rem;
   color: #607b96;
 }
+
 #contact-form-container {
   color: #607b96;
   margin-left: 8rem;
   margin-right: 8rem;
 }
+
 #contact-form-container label {
   margin-bottom: 0.6rem;
 }
+
 #contact-form-container input {
   width: 23.25rem;
   height: 2.5625rem;
@@ -564,6 +734,7 @@ input[type='checkbox']:checked {
   box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3);
   margin-bottom: 1.5rem;
 }
+
 #contact-form-container textarea {
   width: 23.25rem;
   flex-shrink: 0;
@@ -572,13 +743,16 @@ input[type='checkbox']:checked {
   background: #011221;
   box-shadow: 0px 0px 0px 2px rgba(96, 123, 150, 0.3);
 }
+
 #submit-btn {
   margin-top: 2rem;
   color: #fea55f;
 }
+
 #submit-btn:hover {
   color: #c98bdf;
 }
+
 #contact-form-displayer {
   font-family: 'Fira Code', monospace;
   width: 29vw;
@@ -587,30 +761,77 @@ input[type='checkbox']:checked {
 
 /*mobile css */
 @media (max-width: 500px) {
-  #top-navbar li:first-of-type::before {
-  content: url(/assets/menu-icon.svg);
+  body {
+    display: flex;
+    justify-content: center;
+      align-items: center;
+  }
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: middle;
+    position: initial;
+  }
+  #navbar-container {
+    flex-flow: column wrap;
+  }
+  #top-navbar a {
+    color: #43d9ad;
+    font-size: .9rem;
   }
   #top-navbar li {
     float: inline-start;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #607b96;
+    display: block;
   }
+
+  #top-navbar #menu-login {
+  margin-left: none !important;
+}
   #top-navbar li:first-of-type {
     width: auto;
   }
+  #menu-login li {
+    margin-left: none !important;
+  }
+
   #welcome-right {
     display: none;
   }
+
   #welcome-section {
     height: auto;
   }
+
   #welcome-left {
     text-align: left;
     width: auto;
     padding-left: 2rem;
   }
-    .hljs {
-      text-wrap: wrap;
-    }
-        #about-main-container {
-          width: auto;
-        }
+
+  .hljs {
+    text-wrap: wrap;
   }
+
+  #about-main-container {
+    width: auto;
+  }
+
+  .bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+    cursor: pointer;
+    color: #607b96;
+  }
+
+    .bm-burger-button .bm-burger-bars {
+    background-color: #607b96;
+  }
+}
+}
