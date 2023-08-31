@@ -1,6 +1,7 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
+
   h1,
   h2,
   h3,
@@ -211,6 +212,10 @@
   #link a {
     color: #e99287;
     text-decoration: none;
+  }
+
+  #navbar-container>#menu-contact {
+    margin-left: auto;
   }
 
   #metal-block {
@@ -607,7 +612,7 @@
     align-items: center;
     gap: 0.625rem;
     border-radius: 0.5rem;
-    border: 0;
+    border-width: 0;
     background: #1c2b3a;
     color: #fff;
     text-align: right;
@@ -730,6 +735,7 @@
     #menu-login li {
       margin-left: none !important;
     }
+
 
     #welcome-right {
       display: none;

@@ -9,6 +9,14 @@ const settingTextearea = reactive({
   isError: false,
   placeholder: ''
 })
+const settingNameArea = reactive({
+  isError: false,
+  placeholder: ''
+})
+const settingEmailArea = reactive({
+  isError: false,
+  placeholder: ''
+})
 const sendMail = () => {
   let isError = false
   const contactFormStatus = document.querySelector('#contact-form-status')
@@ -17,6 +25,21 @@ const sendMail = () => {
   if (store.contactForm.message == undefined || store.contactForm.message == '') {
     settingTextearea.isError = isError = true
     settingTextearea.placeholder = 'Message can not be blank'
+  } else {
+    settingTextearea.isError = false
+    settingTextearea.placeholder = ''
+    settingTextearea.classList.add('valid')
+  }
+  if (store.contactForm.name == undefined || store.contactForm.name == '') {
+    settingNameArea.isError = isError = true
+    settingNameArea.placeholder = 'name can not be blank'
+  } else {
+    settingTextearea.isError = false
+    settingTextearea.placeholder = ''
+  }
+  if (store.contactForm.email == undefined || store.contactForm.email == '') {
+    settingEmailArea.isError = isError = true
+    settingEmailArea.placeholder = 'email can not be blank'
   } else {
     settingTextearea.isError = false
     settingTextearea.placeholder = ''
@@ -51,6 +74,8 @@ const sendMail = () => {
               place
               class="contact-input"
               v-model="store.contactForm.name"
+              :placeholder="settingNameArea.placeholder"
+              :class="{ error: settingNameArea.isError, valid: !settingNameArea.isError }"
               type="text"
             />
           </div>
@@ -60,6 +85,8 @@ const sendMail = () => {
               name="email"
               class="contact-input"
               v-model="store.contactForm.email"
+              :placeholder="settingEmailArea.placeholder"
+              :class="{ error: settingEmailArea.isError, valid: !settingEmailArea.isError }"
               type="email"
             />
           </div>
