@@ -11,7 +11,7 @@ console.log(mediaQuery)
   <header>
     <nav id="top-navbar">
       <div v-if="mediaQuery">
-        <Slide noOverlay>
+        <Slide noOverlay :closeOnNavigation="true">
           <ul>
             <div id="navbar-container" class="flex-row-start">
               <li><RouterLink to="/">yann-guenot</RouterLink></li>
@@ -21,7 +21,7 @@ console.log(mediaQuery)
               <li><a href="#">_delivered</a></li>
               <li><a href="#">_pricing</a></li>
               <li><a href="#">_recent</a></li> -->
-              <li><RouterLink to="/contact">_contact</RouterLink></li>
+              <li id="menu-contact"><RouterLink to="/contact">_contact</RouterLink></li>
               <!-- <li id="menu-login"><a href="#">_login</a></li> -->
             </div>
           </ul>

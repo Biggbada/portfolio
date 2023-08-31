@@ -63,9 +63,9 @@ const sendMail = () => {
 </script>
 
 <template>
-  <div class="item-column bordered">
+  <div id="contact-form" class="item-column bordered">
     <div id="contact-form-container" class="flex-row">
-      <div class="item-column">
+      <div id="contact-form-inputs-container" class="item-column">
         <form @submit.prevent="sendMail" class="form" ref="form" action="">
           <div class="item-column">
             <label for="name">_name:</label>
