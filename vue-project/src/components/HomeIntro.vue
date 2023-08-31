@@ -1,9 +1,9 @@
 <template>
   <div class="item-column" id="welcome-left">
     <div class="whoami">
-      <p id="welcome">Bonjour, je suis</p>
+      <p id="welcome">Hello world, I'm</p>
       <h1>Yann GUENOT</h1>
-      <p id="full-stack-title">&gt; Full-stack developer</p>
+      <p id="full-stack-title">&gt; Full-stack developer <span class="grey">jr</span></p>
     </div>
     <div id="welcome-text">
       <p>// welcome to my website</p>

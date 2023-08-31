@@ -1,6 +1,7 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
+
   h1,
   h2,
   h3,
@@ -219,7 +220,7 @@
     text-decoration: none;
   }
 
-  #navbar-container > #menu-contact {
+  #navbar-container>#menu-contact {
     margin-left: auto;
   }
 
@@ -338,10 +339,11 @@
 
   #bottom-nav-container {
     bottom: 0;
+    background-color: #011627ee;
   }
 
   #bottom-navbar {
-    width: 100%;
+    width: 100vw;
     color: #607b96;
     bottom: 0;
   }
@@ -399,6 +401,11 @@
 
   #git-link:visited {
     color: #e5e9f0;
+  }
+
+  #logo-git {
+    margin-right: .7rem;
+    vertical-align: middle;
   }
 
   #central-footer-li {
@@ -521,6 +528,10 @@
     color: #5565e8;
   }
 
+  .grey {
+    color: #607b96;
+  }
+
   .salmon {
     color: #e99287;
   }
@@ -589,6 +600,7 @@
     align-items: start;
     width: 75vw;
     min-height: 50vh;
+    margin-bottom: 4rem;
   }
 
   .project-container {
@@ -793,6 +805,7 @@
       /* width: 100vw;
       max-width: 100vw; */
       margin: 0;
+      width: initial;
     }
 
     #about-top-bar #bio-personal-info {
@@ -914,7 +927,7 @@
       justify-content: center;
     }
 
-    #bio-col-1 > div {
+    #bio-col-1>div {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
@@ -922,7 +935,7 @@
       gap: 1rem;
     }
 
-    #bio-col-1 > div > div {
+    #bio-col-1>div>div {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -930,7 +943,7 @@
       margin-bottom: 0;
     }
 
-    #contact-form-inputs-container > form {
+    #contact-form-inputs-container>form {
       width: 90%;
     }
 
@@ -939,6 +952,22 @@
       background-repeat: no-repeat;
       background-position: center;
       width: 100%;
+    }
+
+    #central-footer-li {
+      display: none;
+    }
+
+    #logo-git {
+      margin-left: auto;
+    }
+
+    #bottom-nav-container>ul>div>li:last-child {
+      text-align: right;
+    }
+
+    #bottom-navbar li:first-of-type {
+      width: fit-content;
     }
   }
 }
