@@ -1,7 +1,6 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
-
   h1,
   h2,
   h3,
@@ -228,7 +227,7 @@
     text-decoration: none;
   }
 
-  #navbar-container>#menu-contact {
+  #navbar-container > #menu-contact {
     margin-left: auto;
   }
 
@@ -965,7 +964,7 @@
       justify-content: center;
     }
 
-    #bio-col-1>div {
+    #bio-col-1 > div {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
@@ -973,7 +972,7 @@
       gap: 1rem;
     }
 
-    #bio-col-1>div>div {
+    #bio-col-1 > div > div {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -981,7 +980,7 @@
       margin-bottom: 0;
     }
 
-    #contact-form-inputs-container>form {
+    #contact-form-inputs-container > form {
       width: 90%;
     }
 
