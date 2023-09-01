@@ -28,7 +28,6 @@ const sendMail = () => {
   } else {
     settingTextearea.isError = false
     settingTextearea.placeholder = ''
-    settingTextearea.classList.add('valid')
   }
   if (store.contactForm.name == undefined || store.contactForm.name == '') {
     settingNameArea.isError = isError = true
@@ -50,12 +49,24 @@ const sendMail = () => {
       () => {
         contactFormStatus.textContent = 'Message sent!'
         contactFormStatus.classList.add('valid')
+        setTimeout(() => {
+          const errorMsg = document.getElementById('contact-form-status')
+          console.log(errorMsg)
+          errorMsg.classList.remove('valid')
+          errorMsg.textContent = ''
+        }, 3000)
         store.resetContactForm()
       },
       (error) => {
         console.log(error)
         contactFormStatus.classList.add('error')
         contactFormStatus.textContent = 'Message not sent, please try again'
+        setTimeout(() => {
+          const errorMsg = document.getElementById('contact-form-status')
+          console.log(errorMsg)
+          errorMsg.classList.remove('error')
+          errorMsg.textContent = ''
+        }, 3000)
       }
     )
   }

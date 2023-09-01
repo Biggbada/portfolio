@@ -5,7 +5,7 @@ import FooterView from './components/FooterView.vue'
 </script>
 
 <template>
-  <div>
+  <div class="app-vue">
     <HeaderView />
     <div id="about-main-container" class="content">
       <RouterView></RouterView>
