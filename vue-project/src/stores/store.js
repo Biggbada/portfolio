@@ -70,6 +70,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'vuejs app with reactive & designed components',
       content: 'blablabla',
       git: 'https://github.com/Biggbada/portfolio',
+      vercel: 'https://portfolio-omega-woad-32.vercel.app/',
       cover: project4YannCover
     },
     {
@@ -80,6 +81,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'function random, contextual background, slides',
       content: 'blablabla',
       git: 'https://github.com/Biggbada/weather-app-damien',
+      vercel: 'https://weather-app-damien-refactor.vercel.app/',
       cover: project1YannCover
     },
     {
@@ -90,6 +92,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'deep results, audio features, good perfs',
       content: 'blablabla',
       git: 'https://github.com/Biggbada/07_dictionnary',
+      vercel: 'https://07-dictionnary.vercel.app/',
       cover: project2YannCover
     },
     {
@@ -100,6 +103,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'js maths & Date object handling',
       content: 'blablabla',
       git: 'https://github.com/Biggbada/05-Calculate-Age',
+      vercel: 'https://05-calculate-age.vercel.app/',
       cover: project3YannCover
     }
   ]

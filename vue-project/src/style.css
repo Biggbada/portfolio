@@ -1,6 +1,7 @@
 @import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
 
 @supports (font-variation-settings: normal) {
+
   h1,
   h2,
   h3,
@@ -227,7 +228,7 @@
     text-decoration: none;
   }
 
-  #navbar-container > #menu-contact {
+  #navbar-container>#menu-contact {
     margin-left: auto;
   }
 
@@ -648,7 +649,6 @@
     font-style: normal;
     font-weight: 450;
     line-height: normal;
-    margin-left: 1.94rem;
     margin-bottom: 1.97rem;
   }
 
@@ -662,6 +662,13 @@
     border: 1px solid #fff;
     background-color: transparent;
     color: #fff;
+  }
+
+  .project-buttons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
   }
 
   /*contact*/
@@ -871,6 +878,7 @@
       flex-flow: column wrap;
       justify-content: center;
       align-items: center;
+      padding: 0;
     }
 
     #about-desription #bio-col-2 {
@@ -957,7 +965,7 @@
       justify-content: center;
     }
 
-    #bio-col-1 > div {
+    #bio-col-1>div {
       display: flex;
       flex-flow: column wrap;
       justify-content: center;
@@ -965,7 +973,7 @@
       gap: 1rem;
     }
 
-    #bio-col-1 > div > div {
+    #bio-col-1>div>div {
       display: flex;
       flex-flow: row wrap;
       justify-content: center;
@@ -973,7 +981,7 @@
       margin-bottom: 0;
     }
 
-    #contact-form-inputs-container > form {
+    #contact-form-inputs-container>form {
       width: 90%;
     }
 
@@ -1014,6 +1022,17 @@
 
     #find-me {
       display: none;
+    }
+
+    .project-buttons-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5em;
+    }
+
+    .grey-button {
+      margin-left: 0;
     }
   }
 }

@@ -31,9 +31,12 @@ const store = useStore()
               <div class="project-excerpt code">
                 {{ project.excerpt }}
               </div>
-              <div>
+              <div class="project-buttons-container">
+                <button v-if="project.vercel" class="grey-button">
+                  <a target="blank" v-bind:href="project.vercel">view-project</a>
+                </button>
                 <button class="grey-button">
-                  <a target="blank" v-bind:href="project.git">view-project</a>
+                  <a target="blank" v-bind:href="project.git">view-source</a>
                 </button>
               </div>
             </div>
