@@ -105,6 +105,17 @@ export const useStore = defineStore('store', () => {
       git: 'https://github.com/Biggbada/05-Calculate-Age',
       vercel: 'https://05-calculate-age.vercel.app/',
       cover: project3YannCover
+    },
+    {
+      id: 5,
+      title: 'react doctor',
+      type: 'react',
+      technos: ['html', 'css', 'react'],
+      excerpt: 'adaptation of a template in react',
+      content: 'blablabla',
+      git: 'https://github.com/Biggbada/05-Calculate-Age',
+      vercel: 'https://05-calculate-age.vercel.app/',
+      cover: project3YannCover
     }
   ]
   const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
