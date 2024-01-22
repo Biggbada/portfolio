@@ -5,8 +5,15 @@ import { useStore } from '@/stores/store'
 const store = useStore()
 const mediaQuery = store.mql
 console.log(mediaQuery)
-</script>
 
+</script>
+<script>
+export default {
+    components: {
+        Slide // Register your component
+    }
+}
+</script>
 <template>
   <header>
     <nav id="top-navbar">
