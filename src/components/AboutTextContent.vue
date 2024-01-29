@@ -11,12 +11,13 @@
       7 * -----------------<br />
       8 * Wanna know more ?<br />
       9 * Discover some projects <br />
-      10 * samples and contact <br />
-      11 * me on contact page !<br />
-      12 * You also can visit<br />
-      13 * my GitHub or Linkedin<br />
-      14 * pages<br />
-      15 */
+      10 * samples and send me <br />
+      11 * a message on contact<br />
+      12 * page.<br />
+      13 * You also can visit<br />
+      14 * my GitHub or Linkedin<br />
+      15 * pages <br />
+      16 * /
     </div>
   </div>
 </template>
