@@ -45,10 +45,16 @@ const sendMail = () => {
   }
 
   if (!isError) {
+    emailjs.sendForm(
+      import.meta.env.VITE_EMAIL_JS_SERVICE,
+      import.meta.env.VITE_EMAIL_JS_TEMPLATE,
+      form.value,
+      import.meta.env.VITE_EMAIL_JS_USER
+    )
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE,
-        import.meta.env.VITE_EMAIL_JS_TEMPLATE,
+        import.meta.env.VITE_EMAIL_JS_CUSTOMER_TEMPLATE,
         form.value,
         import.meta.env.VITE_EMAIL_JS_USER
       )
