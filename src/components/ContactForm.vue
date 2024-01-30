@@ -45,30 +45,46 @@ const sendMail = () => {
   }
 
   if (!isError) {
-    emailjs.sendForm(
-      import.meta.env.VITE_EMAIL_JS_SERVICE,
-      import.meta.env.VITE_EMAIL_JS_TEMPLATE,
-      form.value,
-      import.meta.env.VITE_EMAIL_JS_USER
-    )
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE,
-        import.meta.env.VITE_EMAIL_JS_CUSTOMER_TEMPLATE,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE,
         form.value,
         import.meta.env.VITE_EMAIL_JS_USER
       )
       .then(
         () => {
-          contactFormStatus.textContent = 'Message sent!'
-          contactFormStatus.classList.add('valid')
-          setTimeout(() => {
-            const errorMsg = document.getElementById('contact-form-status')
-            console.log(errorMsg)
-            errorMsg.classList.remove('valid')
-            errorMsg.textContent = ''
-          }, 3000)
-          store.resetContactForm()
+          emailjs
+            .sendForm(
+              import.meta.env.VITE_EMAIL_JS_SERVICE,
+              import.meta.env.VITE_EMAIL_JS_CUSTOMER_TEMPLATE,
+              form.value,
+              import.meta.env.VITE_EMAIL_JS_USER
+            )
+            .then(
+              () => {
+                contactFormStatus.textContent = 'Message sent!'
+                contactFormStatus.classList.add('valid')
+                setTimeout(() => {
+                  const errorMsg = document.getElementById('contact-form-status')
+                  console.log(errorMsg)
+                  errorMsg.classList.remove('valid')
+                  errorMsg.textContent = ''
+                }, 3000)
+                store.resetContactForm()
+              },
+              (error) => {
+                console.log(error)
+                contactFormStatus.classList.add('error')
+                contactFormStatus.textContent = 'Confirmation message not sent, please try again'
+                setTimeout(() => {
+                  const errorMsg = document.getElementById('contact-form-status')
+                  console.log(errorMsg)
+                  errorMsg.classList.remove('error')
+                  errorMsg.textContent = ''
+                }, 3000)
+              }
+            )
         },
         (error) => {
           console.log(error)
