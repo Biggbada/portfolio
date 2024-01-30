@@ -45,30 +45,37 @@ const sendMail = () => {
   }
 
   if (!isError) {
-    emailjs.sendForm('service_ejcepws', 'template_xiv62ks', form.value, 'zenfkgMGV-PfC2A69').then(
-      () => {
-        contactFormStatus.textContent = 'Message sent!'
-        contactFormStatus.classList.add('valid')
-        setTimeout(() => {
-          const errorMsg = document.getElementById('contact-form-status')
-          console.log(errorMsg)
-          errorMsg.classList.remove('valid')
-          errorMsg.textContent = ''
-        }, 3000)
-        store.resetContactForm()
-      },
-      (error) => {
-        console.log(error)
-        contactFormStatus.classList.add('error')
-        contactFormStatus.textContent = 'Message not sent, please try again'
-        setTimeout(() => {
-          const errorMsg = document.getElementById('contact-form-status')
-          console.log(errorMsg)
-          errorMsg.classList.remove('error')
-          errorMsg.textContent = ''
-        }, 3000)
-      }
-    )
+    emailjs
+      .sendForm(
+        import.meta.env.VITE_EMAIL_JS_SERVICE,
+        import.meta.env.VITE_EMAIL_JS_TEMPLATE,
+        form.value,
+        import.meta.env.VITE_EMAIL_JS_USER
+      )
+      .then(
+        () => {
+          contactFormStatus.textContent = 'Message sent!'
+          contactFormStatus.classList.add('valid')
+          setTimeout(() => {
+            const errorMsg = document.getElementById('contact-form-status')
+            console.log(errorMsg)
+            errorMsg.classList.remove('valid')
+            errorMsg.textContent = ''
+          }, 3000)
+          store.resetContactForm()
+        },
+        (error) => {
+          console.log(error)
+          contactFormStatus.classList.add('error')
+          contactFormStatus.textContent = 'Message not sent, please try again'
+          setTimeout(() => {
+            const errorMsg = document.getElementById('contact-form-status')
+            console.log(errorMsg)
+            errorMsg.classList.remove('error')
+            errorMsg.textContent = ''
+          }, 3000)
+        }
+      )
   }
 }
 </script>
