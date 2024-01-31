@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import logoHtml from '/assets/logo-html.svg'
 import logoCss from '/assets/logo-css.svg'
 import logoVuejs from '/assets/logo-vue.svg'
+import logoWordPress from '/assets/logo-wordpress.svg'
 import logoReact from '/assets/logo-react.svg'
 // import project1Cover from '/assets/project-img-01.svg'
 // import project2Cover from '/assets/project-img-02.svg'
@@ -11,6 +12,8 @@ import project1YannCover from '/assets/bg-weather-app-yann-guenot_001.png'
 import project2YannCover from '/assets/bg-dictionnary-api-app-yann-guenot_001.png'
 import project3YannCover from '/assets/bg-age-calculator-vanilia-js-app-yann-guenot_001.png'
 import project4YannCover from '/assets/bg-portfolio-vuejs-app-yann-guenot_001.png'
+import project5YannCover from '/assets/bg-portfolio-dumatos-equipement-website-yann-guenot_001.png'
+import project6YannCover from '/assets/bg-portfolio-rachel-voix-off-website-yann-guenot_001.png'
 export const useStore = defineStore('store', () => {
   const technos = [
     {
@@ -32,36 +35,14 @@ export const useStore = defineStore('store', () => {
       id: 4,
       name: 'react',
       icon: logoReact
+    },
+    {
+      id: 5,
+      name: 'wordpress',
+      icon: logoWordPress
     }
   ]
   const projects = [
-    // {
-    //   id: 1,
-    //   title: 'projet 1',
-    //   type: 'ui_animations',
-    //   technos: ['html', 'css', 'js'],
-    //   excerpt: 'blablablablablablablabla',
-    //   content: 'blablabla',
-    //   cover: project1Cover
-    // },
-    // {
-    //   id: 2,
-    //   title: 'projet 2',
-    //   type: 'ui_animations',
-    //   technos: ['html', 'css', 'js'],
-    //   excerpt: 'blablablablablablablabla',
-    //   content: 'blablabla',
-    //   cover: project2Cover
-    // },
-    // {
-    //   id: 3,
-    //   title: 'projet 3',
-    //   type: 'ui_animations',
-    //   technos: ['html', 'css', 'js'],
-    //   excerpt: 'blablablablablablablabla',
-    //   content: 'blablabla',
-    //   cover: project3Cover
-    // }
     {
       id: 1,
       title: 'portfolio app',
@@ -70,7 +51,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'vuejs app with reactive & designed components',
       content: 'blablabla',
       git: 'https://github.com/Biggbada/portfolio',
-      vercel: 'https://portfolio-omega-woad-32.vercel.app/',
+      vercel: 'https://portfolio.polepo.fr',
       cover: project4YannCover
     },
     {
@@ -108,14 +89,25 @@ export const useStore = defineStore('store', () => {
     },
     {
       id: 5,
-      title: 'react doctor',
-      type: 'react',
-      technos: ['html', 'css', 'react'],
-      excerpt: 'adaptation of a template in react',
-      content: 'blablabla',
-      git: 'https://github.com/Biggbada/05-Calculate-Age',
-      vercel: 'https://05-calculate-age.vercel.app/',
-      cover: project3YannCover
+      title: 'dumatos equipement',
+      type: 'wordpress',
+      technos: ['wordpress'],
+      excerpt: 'e-commerce website',
+      content: 'runs from 2021',
+      git: '',
+      vercel: 'https://dumatos-equipement.fr',
+      cover: project5YannCover
+    },
+    {
+      id: 6,
+      title: 'rachel voix-off',
+      type: 'wordpress',
+      technos: ['wordpress'],
+      excerpt: 'showcase website',
+      content: 'runs from 2022',
+      git: '',
+      vercel: 'https://rachelvoixoff.fr/',
+      cover: project6YannCover
     }
   ]
   const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
@@ -127,7 +119,7 @@ export const useStore = defineStore('store', () => {
   const contactForm = ref(contactFormVide)
 
   const today = ref(new Date().toLocaleString())
-  let technoSelected = ref(['html', 'css', 'react', 'vuejs'])
+  let technoSelected = ref(['html', 'css', 'react', 'vuejs', 'wordpress'])
   const filteredProjects = computed(() => {
     return projects.filter((projet) => {
       let isIncluded = false

@@ -633,6 +633,10 @@
     padding: 1rem;
   }
 
+  .project-content {
+    font-style: italic;
+  }
+
   .grey-button {
     display: inline-flex;
     padding: 0.625rem 0.875rem;

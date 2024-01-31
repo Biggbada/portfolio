@@ -30,12 +30,15 @@ const store = useStore()
               ></div>
               <div class="project-excerpt code">
                 {{ project.excerpt }}
+                <p v-if="project.content" class="project-content">
+                  {{ project.content }}
+                </p>
               </div>
               <div class="project-buttons-container">
                 <button v-if="project.vercel" class="grey-button">
                   <a target="blank" v-bind:href="project.vercel">view-project</a>
                 </button>
-                <button class="grey-button">
+                <button v-if="project.git" class="grey-button">
                   <a target="blank" v-bind:href="project.git">view-source</a>
                 </button>
               </div>
