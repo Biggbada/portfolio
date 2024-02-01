@@ -14,6 +14,8 @@ import project3YannCover from '/assets/bg-age-calculator-vanilia-js-app-yann-gue
 import project4YannCover from '/assets/bg-portfolio-vuejs-app-yann-guenot_001.png'
 import project5YannCover from '/assets/bg-portfolio-dumatos-equipement-website-yann-guenot_001.png'
 import project6YannCover from '/assets/bg-portfolio-rachel-voix-off-website-yann-guenot_001.png'
+import project7YannCover from '/assets/bg-portfolio-gaia-conseils-website-yann-guenot_001.png'
+import project8YannCover from '/assets/bg-portfolio-grenzenlos-yoga-website-yann-guenot_001.png'
 export const useStore = defineStore('store', () => {
   const technos = [
     {
@@ -108,6 +110,28 @@ export const useStore = defineStore('store', () => {
       git: '',
       vercel: 'https://rachelvoixoff.fr/',
       cover: project6YannCover
+    },
+    {
+      id: 7,
+      title: 'gaia-conseils',
+      type: 'wordpress',
+      technos: ['wordpress'],
+      excerpt: 'showcase website',
+      content: 'runs from 2023',
+      git: '',
+      vercel: 'https://https://gaia-conseils.ch/',
+      cover: project7YannCover
+    },
+    {
+      id: 8,
+      title: 'grenzenlos-yoga',
+      type: 'wordpress',
+      technos: ['wordpress'],
+      excerpt: 'showcase website',
+      content: 'runs from 2023',
+      git: '',
+      vercel: 'https://grenzenlos-yoga.ch/',
+      cover: project8YannCover
     }
   ]
   const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
