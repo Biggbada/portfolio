@@ -76,7 +76,7 @@ export const useStore = defineStore('store', () => {
       type: 'vuejs',
       technos: ['html', 'css', 'vuejs', 'all'],
       excerpt: 'this website',
-      content: 'vuejs webapp with reactive & designed components',
+      content: 'a first vuejs webapp with reactive & designed components',
       git: 'https://github.com/Biggbada/portfolio',
       vercel: 'https://portfolio.polepo.fr',
       cover: project4YannCover
@@ -87,7 +87,7 @@ export const useStore = defineStore('store', () => {
       type: 'api app',
       technos: ['html', 'css', 'vanilla js', 'all'],
       excerpt: "a weather app i'm still working on",
-      content: 'standard & random searchs, favorites management...',
+      content: 'now provides standard & random searchs, favorites management...',
       git: 'https://github.com/Biggbada/weather-app-damien',
       vercel: 'https://weather-app-damien-refactor.vercel.app/',
       cover: project1YannCover
@@ -98,7 +98,7 @@ export const useStore = defineStore('store', () => {
       type: 'api app',
       technos: ['html', 'css', 'vanilla js', 'all'],
       excerpt: 'api handling exercise',
-      content: 'deep results, audio features, good perfs',
+      content: 'a first api handling exercise - deep results, audio features, good perfs',
       git: 'https://github.com/Biggbada/07_dictionnary',
       vercel: 'https://07-dictionnary.vercel.app/',
       cover: project2YannCover
@@ -109,7 +109,7 @@ export const useStore = defineStore('store', () => {
       type: 'vanilia js',
       technos: ['html', 'css', 'vanilla js', 'all'],
       excerpt: 'js exercise, calculates your age',
-      content: 'maths & date objects handling',
+      content: 'maths & date objects handling exercise in vanilla js',
       git: 'https://github.com/Biggbada/05-Calculate-Age',
       vercel: 'https://05-calculate-age.vercel.app/',
       cover: project3YannCover
@@ -120,7 +120,8 @@ export const useStore = defineStore('store', () => {
       type: 'symfony webapp',
       technos: ['symfony', 'php', 'vanilla js', 'all'],
       excerpt: 'local-hosted webapp, internal usage',
-      content: 'runs from 2023, management of posts, files, acces rights...',
+      content:
+        'management of posts, products, files, acces rights... - runs from 2023, 15 internal users ',
       git: '',
       vercel: '',
       cover: project5YannCover
@@ -131,7 +132,7 @@ export const useStore = defineStore('store', () => {
       type: 'wordpress',
       technos: ['wordpress', 'all'],
       excerpt: 'e-commerce website',
-      content: 'runs from 2021',
+      content: 'my first e-commerce made with wordpress - runs from 2021',
       git: '',
       vercel: 'https://dumatos-equipement.fr',
       cover: project6YannCover
@@ -142,7 +143,7 @@ export const useStore = defineStore('store', () => {
       type: 'wordpress',
       technos: ['wordpress', 'all'],
       excerpt: 'showcase website',
-      content: 'runs from 2022',
+      content: 'another wordpress project with audio features - runs from 2022',
       git: '',
       vercel: 'https://rachelvoixoff.fr/',
       cover: project7YannCover
@@ -153,7 +154,7 @@ export const useStore = defineStore('store', () => {
       type: 'wordpress',
       technos: ['wordpress', 'all'],
       excerpt: 'showcase website',
-      content: 'runs from 2023',
+      content: 'a newer & multilingual version of gaia-conseils.ch - runs from 2023',
       git: '',
       vercel: 'https://https://gaia-conseils.ch/',
       cover: project8YannCover
@@ -164,7 +165,7 @@ export const useStore = defineStore('store', () => {
       type: 'wordpress',
       technos: ['wordpress', 'all'],
       excerpt: 'showcase website',
-      content: 'runs from 2023',
+      content: 'a newer version of grenzenlos-yoga.ch with products - runs from 2023',
       git: '',
       vercel: 'https://grenzenlos-yoga.ch/',
       cover: project9YannCover
