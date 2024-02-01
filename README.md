@@ -1,3 +1,7 @@
+# the project
+
+You can see the project on portfolio.polepo.fr
+
 # vue-project
 
 This template should help get you started developing with Vue 3 in Vite.

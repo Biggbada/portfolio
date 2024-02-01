@@ -2,9 +2,12 @@ import { ref, computed } from 'vue'
 import { defineStore } from 'pinia'
 import logoHtml from '/assets/logo-html.svg'
 import logoCss from '/assets/logo-css.svg'
+import logoVanillaJs from '/assets/logo-javascript.svg'
+import logoSymfony from '/assets/logo-symfony.svg'
 import logoVuejs from '/assets/logo-vue.svg'
 import logoWordPress from '/assets/logo-wordpress.svg'
 import logoReact from '/assets/logo-react.svg'
+import logoCheckAll from '/assets/logo-check-all.svg'
 // import project1Cover from '/assets/project-img-01.svg'
 // import project2Cover from '/assets/project-img-02.svg'
 // import project3Cover from '/assets/project-img-03.svg'
@@ -12,12 +15,18 @@ import project1YannCover from '/assets/bg-weather-app-yann-guenot_001.png'
 import project2YannCover from '/assets/bg-dictionnary-api-app-yann-guenot_001.png'
 import project3YannCover from '/assets/bg-age-calculator-vanilia-js-app-yann-guenot_001.png'
 import project4YannCover from '/assets/bg-portfolio-vuejs-app-yann-guenot_001.png'
-import project5YannCover from '/assets/bg-portfolio-dumatos-equipement-website-yann-guenot_001.png'
-import project6YannCover from '/assets/bg-portfolio-rachel-voix-off-website-yann-guenot_001.png'
-import project7YannCover from '/assets/bg-portfolio-gaia-conseils-website-yann-guenot_001.png'
-import project8YannCover from '/assets/bg-portfolio-grenzenlos-yoga-website-yann-guenot_001.png'
+import project5YannCover from '/assets/bg-portfolio-intratos-website-yann-guenot_001.png'
+import project6YannCover from '/assets/bg-portfolio-dumatos-equipement-website-yann-guenot_001.png'
+import project7YannCover from '/assets/bg-portfolio-rachel-voix-off-website-yann-guenot_001.png'
+import project8YannCover from '/assets/bg-portfolio-gaia-conseils-website-yann-guenot_001.png'
+import project9YannCover from '/assets/bg-portfolio-grenzenlos-yoga-website-yann-guenot_001.png'
 export const useStore = defineStore('store', () => {
   const technos = [
+    {
+      id: 0,
+      name: 'all',
+      icon: logoCheckAll
+    },
     {
       id: 1,
       name: 'html',
@@ -30,16 +39,26 @@ export const useStore = defineStore('store', () => {
     },
     {
       id: 3,
+      name: 'vanilla js',
+      icon: logoVanillaJs
+    },
+    {
+      id: 4,
+      name: 'symfony',
+      icon: logoSymfony
+    },
+    {
+      id: 4,
       name: 'vuejs',
       icon: logoVuejs
     },
     {
-      id: 4,
+      id: 5,
       name: 'react',
       icon: logoReact
     },
     {
-      id: 5,
+      id: 6,
       name: 'wordpress',
       icon: logoWordPress
     }
@@ -49,9 +68,9 @@ export const useStore = defineStore('store', () => {
       id: 1,
       title: 'portfolio app',
       type: 'vuejs',
-      technos: ['html', 'css', 'js', 'vuejs'],
-      excerpt: 'vuejs app with reactive & designed components',
-      content: 'blablabla',
+      technos: ['html', 'css', 'vuejs', 'all'],
+      excerpt: 'this website',
+      content: 'vuejs webapp with reactive & designed components',
       git: 'https://github.com/Biggbada/portfolio',
       vercel: 'https://portfolio.polepo.fr',
       cover: project4YannCover
@@ -60,9 +79,9 @@ export const useStore = defineStore('store', () => {
       id: 2,
       title: 'weather app',
       type: 'api app',
-      technos: ['html', 'css', 'js'],
-      excerpt: 'function random, contextual background, slides',
-      content: 'blablabla',
+      technos: ['html', 'css', 'vanilla js', 'all'],
+      excerpt: "an weather app i'm still working on",
+      content: 'standard & random searchs, favorites management...',
       git: 'https://github.com/Biggbada/weather-app-damien',
       vercel: 'https://weather-app-damien-refactor.vercel.app/',
       cover: project1YannCover
@@ -71,9 +90,9 @@ export const useStore = defineStore('store', () => {
       id: 3,
       title: 'dictionnary app',
       type: 'api app',
-      technos: ['html', 'css', 'js'],
-      excerpt: 'deep results, audio features, good perfs',
-      content: 'blablabla',
+      technos: ['html', 'css', 'vanilla js', 'all'],
+      excerpt: 'api handling exercise',
+      content: 'deep results, audio features, good perfs',
       git: 'https://github.com/Biggbada/07_dictionnary',
       vercel: 'https://07-dictionnary.vercel.app/',
       cover: project2YannCover
@@ -82,56 +101,67 @@ export const useStore = defineStore('store', () => {
       id: 4,
       title: 'age calculator',
       type: 'vanilia js',
-      technos: ['html', 'css', 'js'],
-      excerpt: 'js maths & Date object handling',
-      content: 'blablabla',
+      technos: ['html', 'css', 'vanilla js', 'all'],
+      excerpt: 'js exercise, calculates your age',
+      content: 'maths & date objects handling',
       git: 'https://github.com/Biggbada/05-Calculate-Age',
       vercel: 'https://05-calculate-age.vercel.app/',
       cover: project3YannCover
     },
     {
       id: 5,
-      title: 'dumatos equipement',
-      type: 'wordpress',
-      technos: ['wordpress'],
-      excerpt: 'e-commerce website',
-      content: 'runs from 2021',
+      title: 'intratos',
+      type: 'symfony webapp',
+      technos: ['symfony', 'vanilla js', 'all'],
+      excerpt: 'local-hosted webapp, internal usage',
+      content: 'runs from 2023, management of posts, files, acces rights...',
       git: '',
-      vercel: 'https://dumatos-equipement.fr',
+      vercel: '',
       cover: project5YannCover
     },
     {
       id: 6,
-      title: 'rachel voix-off',
+      title: 'dumatos equipement',
       type: 'wordpress',
-      technos: ['wordpress'],
-      excerpt: 'showcase website',
-      content: 'runs from 2022',
+      technos: ['wordpress', 'all'],
+      excerpt: 'e-commerce website',
+      content: 'runs from 2021',
       git: '',
-      vercel: 'https://rachelvoixoff.fr/',
+      vercel: 'https://dumatos-equipement.fr',
       cover: project6YannCover
     },
     {
       id: 7,
-      title: 'gaia-conseils',
+      title: 'rachel voix-off',
       type: 'wordpress',
-      technos: ['wordpress'],
+      technos: ['wordpress', 'all'],
       excerpt: 'showcase website',
-      content: 'runs from 2023',
+      content: 'runs from 2022',
       git: '',
-      vercel: 'https://https://gaia-conseils.ch/',
+      vercel: 'https://rachelvoixoff.fr/',
       cover: project7YannCover
     },
     {
       id: 8,
+      title: 'gaia-conseils',
+      type: 'wordpress',
+      technos: ['wordpress', 'all'],
+      excerpt: 'showcase website',
+      content: 'runs from 2023',
+      git: '',
+      vercel: 'https://https://gaia-conseils.ch/',
+      cover: project8YannCover
+    },
+    {
+      id: 9,
       title: 'grenzenlos-yoga',
       type: 'wordpress',
-      technos: ['wordpress'],
+      technos: ['wordpress', 'all'],
       excerpt: 'showcase website',
       content: 'runs from 2023',
       git: '',
       vercel: 'https://grenzenlos-yoga.ch/',
-      cover: project8YannCover
+      cover: project9YannCover
     }
   ]
   const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
@@ -143,14 +173,12 @@ export const useStore = defineStore('store', () => {
   const contactForm = ref(contactFormVide)
 
   const today = ref(new Date().toLocaleString())
-  let technoSelected = ref(['html', 'css', 'react', 'vuejs', 'wordpress'])
+  let technoSelected = ref('all')
   const filteredProjects = computed(() => {
     return projects.filter((projet) => {
       let isIncluded = false
-      for (const selected of technoSelected.value) {
-        if (projet.technos.map((item) => item.toLowerCase()).includes(selected.toLowerCase())) {
-          isIncluded = true
-        }
+      if (projet.technos.map((item) => item.toLowerCase()).includes(technoSelected.value)) {
+        isIncluded = true
       }
       return isIncluded
     })

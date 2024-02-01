@@ -582,14 +582,15 @@
     width: 14vw;
   }
 
-  input[type='checkbox'] {
+
+  input[type='radio'] {
     padding: 0.2rem;
-    appearance: none;
     width: 1.5em;
     height: 1.5em;
     border-radius: 0.125rem;
     border: 1px solid #607b96;
     vertical-align: middle;
+    accent-color: #4d5bce;
   }
 
   input[type='checkbox']:checked {
@@ -631,10 +632,13 @@
 
   .project-excerpt {
     padding: 1rem;
+    font-style: italic;
+    font-size: 1em;
   }
 
   .project-content {
-    font-style: italic;
+    font-style: normal;
+    font-size: 1.2em;
   }
 
   .grey-button {

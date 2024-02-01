@@ -12,7 +12,7 @@ const store = useStore()
           <label for="techno">
             <input
               class="techno-input"
-              type="checkbox"
+              type="radio"
               v-model="store.technoSelected"
               name="techno"
               :value="techno.name"
