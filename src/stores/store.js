@@ -3,6 +3,7 @@ import { defineStore } from 'pinia'
 import logoHtml from '/assets/logo-html.svg'
 import logoCss from '/assets/logo-css.svg'
 import logoVanillaJs from '/assets/logo-javascript.svg'
+import logoPhp from '/assets/logo-php.svg'
 import logoSymfony from '/assets/logo-symfony.svg'
 import logoVuejs from '/assets/logo-vue.svg'
 import logoWordPress from '/assets/logo-wordpress.svg'
@@ -44,21 +45,26 @@ export const useStore = defineStore('store', () => {
     },
     {
       id: 4,
+      name: 'php',
+      icon: logoPhp
+    },
+    {
+      id: 5,
       name: 'symfony',
       icon: logoSymfony
     },
     {
-      id: 4,
+      id: 6,
       name: 'vuejs',
       icon: logoVuejs
     },
     {
-      id: 5,
+      id: 7,
       name: 'react',
       icon: logoReact
     },
     {
-      id: 6,
+      id: 8,
       name: 'wordpress',
       icon: logoWordPress
     }
@@ -80,7 +86,7 @@ export const useStore = defineStore('store', () => {
       title: 'weather app',
       type: 'api app',
       technos: ['html', 'css', 'vanilla js', 'all'],
-      excerpt: "an weather app i'm still working on",
+      excerpt: "a weather app i'm still working on",
       content: 'standard & random searchs, favorites management...',
       git: 'https://github.com/Biggbada/weather-app-damien',
       vercel: 'https://weather-app-damien-refactor.vercel.app/',
@@ -112,7 +118,7 @@ export const useStore = defineStore('store', () => {
       id: 5,
       title: 'intratos',
       type: 'symfony webapp',
-      technos: ['symfony', 'vanilla js', 'all'],
+      technos: ['symfony', 'php', 'vanilla js', 'all'],
       excerpt: 'local-hosted webapp, internal usage',
       content: 'runs from 2023, management of posts, files, acces rights...',
       git: '',

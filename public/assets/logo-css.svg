@@ -1,10 +1,10 @@
-<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g opacity="0.4" clip-path="url(#clip0_2929_813)">
-<path d="M5.81158 3.28027L5.16158 6.62027H18.7516L18.3116 8.78027H4.73158L4.07158 12.1103H17.6616L16.9016 15.9203L11.4216 17.7303L6.67158 15.9203L7.00158 14.2803H3.66158L2.87158 18.2803L10.7216 21.2803L19.7716 18.2803L20.9716 12.2503L21.2116 11.0403L22.7516 3.28027H5.81158Z" fill="#607B96"/>
-</g>
-<defs>
-<clipPath id="clip0_2929_813">
-<rect width="24" height="24" fill="white" transform="translate(0.811523 0.280273)"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: $$$/GeneralStr/196=Adobe Illustrator 27.6.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Calque_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 25 25" style="enable-background:new 0 0 25 25;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#607B96;}
+</style>
+<path class="st0" d="M5.5,3.5L4.8,6.8h13.6L18,9H4.4l-0.7,3.3h13.6l-0.8,3.8L11.1,18l-4.8-1.8l0.3-1.6H3.3l-0.8,4l7.9,3l9.1-3l1.2-6
+	l0.2-1.2l1.5-7.8H5.5z"/>
 </svg>
