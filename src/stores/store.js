@@ -156,7 +156,7 @@ export const useStore = defineStore('store', () => {
       excerpt: 'showcase website',
       content: 'a newer & multilingual version of gaia-conseils.ch - runs from 2023',
       git: '',
-      vercel: 'https://https://gaia-conseils.ch/',
+      vercel: 'https://gaia-conseils.ch/',
       cover: project8YannCover
     },
     {
