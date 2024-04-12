@@ -4,8 +4,8 @@
       <ul>
         <div class="flex-row">
           <li id="find-me" class="noli">find me in</li>
-          <li class="noli">
-            <a href="https://www.linkedin.com/in/yann-guenot-607171101/" id="linkedin-link">
+          <a href="https://www.linkedin.com/in/yann-guenot-607171101/" id="linkedin-link">
+            <li class="noli">
               <img
                 id="logo-linkedin"
                 src="/assets/logo-linkedin.svg"
@@ -13,15 +13,15 @@
                 height="16"
                 alt=""
               />_yann_guenot
-            </a>
-          </li>
+            </li>
+          </a>
           <li id="central-footer-li">-</li>
-          <li class="noli">
-            <a id="git-link" href="https://github.com/Biggbada">
+          <a id="git-link" class="noli" href="https://github.com/Biggbada">
+            <li>
               <img id="logo-git" src="/assets/github-logo.svg" width="16" height="16" alt="" />
               _@Biggbada
-            </a>
-          </li>
+            </li>
+          </a>
         </div>
       </ul>
     </div>
