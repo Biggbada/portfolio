@@ -16,12 +16,12 @@
             </li>
           </a>
           <li id="central-footer-li">-</li>
-          <a id="git-link" class="noli" href="https://github.com/Biggbada">
-            <li>
+          <li class="noli">
+            <a id="git-link" href="https://github.com/Biggbada">
               <img id="logo-git" src="/assets/github-logo.svg" width="16" height="16" alt="" />
               _@Biggbada
-            </li>
-          </a>
+            </a>
+          </li>
         </div>
       </ul>
     </div>
