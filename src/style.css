@@ -906,8 +906,11 @@
     }
 
     #about-description #technos-selector {
-      display: none;
+      /* display: none; */
+      width: fit-content;
+      margin-right: auto;
     }
+
 
     #projects-container {
       flex-flow: column wrap;
