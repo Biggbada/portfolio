@@ -887,7 +887,7 @@
       display: none;
     }
 
-    #about-desription {
+    #about-description {
       padding: 2rem 1rem 2rem 1rem;
       box-sizing: border-box;
       flex-flow: column wrap;
@@ -896,7 +896,7 @@
       padding: 0;
     }
 
-    #about-desription #bio-col-2 {
+    #about-description #bio-col-2 {
       width: 82vw;
       border: none;
     }
@@ -905,7 +905,7 @@
       margin-top: 18vw;
     }
 
-    #about-desription #technos-selector {
+    #about-description #technos-selector {
       display: none;
     }
 
