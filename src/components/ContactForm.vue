@@ -48,6 +48,8 @@ const sendMail = () => {
     emailjs.init({
       publicKey: 'zenfkgMGV-PfC2A69'
     });
+    console.log(import.meta.env.VITE_EMAIL_JS_SERVICE);
+    
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE,
