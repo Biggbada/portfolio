@@ -45,6 +45,9 @@ const sendMail = () => {
   }
 
   if (!isError) {
+    emailjs.init({
+      publicKey: 'zenfkgMGV-PfC2A69'
+    });
     emailjs
       .sendForm(
         import.meta.env.VITE_EMAIL_JS_SERVICE,
