@@ -7,6 +7,7 @@ import logoPhp from '/assets/logo-php.svg'
 import logoSymfony from '/assets/logo-symfony.svg'
 import logoVuejs from '/assets/logo-vue.svg'
 import logoWordPress from '/assets/logo-wordpress.svg'
+import logoPrestaShop from '/assets/logo-prestashop.svg'
 import logoReact from '/assets/logo-react.svg'
 import logoCheckAll from '/assets/logo-check-all.svg'
 // import project1Cover from '/assets/project-img-01.svg'
@@ -21,6 +22,7 @@ import project6YannCover from '/assets/bg-portfolio-dumatos-equipement-website-y
 import project7YannCover from '/assets/bg-portfolio-rachel-voix-off-website-yann-guenot_001.png'
 import project8YannCover from '/assets/bg-portfolio-gaia-conseils-website-yann-guenot_001.png'
 import project9YannCover from '/assets/bg-portfolio-grenzenlos-yoga-website-yann-guenot_001.png'
+import project10YannCover from '/assets/bg-portfolio-aesthetic-group-website-yann-guenot_001.png'
 export const useStore = defineStore('store', () => {
   const technos = [
     {
@@ -67,6 +69,11 @@ export const useStore = defineStore('store', () => {
       id: 8,
       name: 'wordpress',
       icon: logoWordPress
+    },
+    {
+      id: 9,
+      name: 'prestashop',
+      icon: logoPrestaShop
     }
   ]
   const projects = [
@@ -169,6 +176,17 @@ export const useStore = defineStore('store', () => {
       git: '',
       vercel: 'https://grenzenlos-yoga.ch/',
       cover: project9YannCover
+    },
+    {
+      id: 10,
+      title: 'aesthetic-group',
+      type: 'prestashop',
+      technos: ['prestashop', 'all'],
+      excerpt: 'e-commerce',
+      content: 'upgrade from version 1.6 to 1.8 - new graphics & theme - EU VAT management  - runs from 2025',
+      git: '',
+      vercel: 'https://www.aestheticgroup.fr/',
+      cover: project10YannCover
     }
   ]
   const mql = ref(window.matchMedia('(max-width: 1200px)').matches)
