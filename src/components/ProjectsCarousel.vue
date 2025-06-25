@@ -41,6 +41,9 @@ const store = useStore()
                 <button v-if="project.git" class="grey-button">
                   <a target="blank" v-bind:href="project.git">view-source</a>
                 </button>
+                <button v-if="project.partner.name" class="grey-button">
+                  <a target="blank" v-bind:href="project.partner.url">web-agency:<br>{{project.partner.name}}</a>
+                </button>
               </div>
             </div>
           </div>

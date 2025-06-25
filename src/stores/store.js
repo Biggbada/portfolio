@@ -86,6 +86,11 @@ export const useStore = defineStore('store', () => {
       content: 'a first vuejs webapp with reactive & designed components',
       git: 'https://github.com/Biggbada/portfolio',
       vercel: 'https://portfolio.polepo.fr',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project4YannCover
     },
     {
@@ -97,6 +102,11 @@ export const useStore = defineStore('store', () => {
       content: 'now provides standard & random searchs, favorites management...',
       git: 'https://github.com/Biggbada/weather-app-damien',
       vercel: 'https://weather-app-damien-refactor.vercel.app/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project1YannCover
     },
     {
@@ -108,6 +118,11 @@ export const useStore = defineStore('store', () => {
       content: 'a first api handling exercise - deep results, audio features, good perfs',
       git: 'https://github.com/Biggbada/07_dictionnary',
       vercel: 'https://07-dictionnary.vercel.app/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project2YannCover
     },
     {
@@ -119,6 +134,11 @@ export const useStore = defineStore('store', () => {
       content: 'maths & date objects handling exercise in vanilla js',
       git: 'https://github.com/Biggbada/05-Calculate-Age',
       vercel: 'https://05-calculate-age.vercel.app/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project3YannCover
     },
     {
@@ -131,6 +151,11 @@ export const useStore = defineStore('store', () => {
         'management of posts, products, files, acces rights... - runs from 2023, 15 internal users ',
       git: '',
       vercel: '',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project5YannCover
     },
     {
@@ -142,6 +167,11 @@ export const useStore = defineStore('store', () => {
       content: 'my first e-commerce made with wordpress - runs from 2021',
       git: '',
       vercel: 'https://dumatos-equipement.fr',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project6YannCover
     },
     {
@@ -153,6 +183,11 @@ export const useStore = defineStore('store', () => {
       content: 'another wordpress project with audio features - runs from 2022',
       git: '',
       vercel: 'https://rachelvoixoff.fr/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project7YannCover
     },
     {
@@ -164,6 +199,11 @@ export const useStore = defineStore('store', () => {
       content: 'a newer & multilingual version of gaia-conseils.ch - runs from 2023',
       git: '',
       vercel: 'https://gaia-conseils.ch/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project8YannCover
     },
     {
@@ -175,6 +215,11 @@ export const useStore = defineStore('store', () => {
       content: 'a newer version of grenzenlos-yoga.ch with products - runs from 2023',
       git: '',
       vercel: 'https://grenzenlos-yoga.ch/',
+      
+      partner: {
+        name: "",
+        url: ""
+      },
       cover: project9YannCover
     },
     {
@@ -183,9 +228,13 @@ export const useStore = defineStore('store', () => {
       type: 'prestashop',
       technos: ['prestashop', 'all'],
       excerpt: 'e-commerce',
-      content: 'upgrade from version 1.6 to 1.8 - new graphics & theme - EU VAT management  - runs from 2025',
+      content: 'upgrade from 1.6 to 1.8 - new graphics & theme - web-agency partnership - runs from 2025',
       git: '',
       vercel: 'https://www.aestheticgroup.fr/',
+      partner: {
+        name: "e-perspectives",
+        url: "https://www.e-perspectives.ch/"
+      },
       cover: project10YannCover
     }
   ]
