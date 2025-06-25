@@ -9,18 +9,19 @@ const store = useStore()
     <ul>
       <div v-for="techno in store.technos" :key="techno.id" class="flex-row-start gap-1">
         <li class="noli">
-          <label for="techno">
-            <input
+          <input
               class="techno-input"
               type="radio"
               v-model="store.technoSelected"
-              name="techno"
+              :name="techno.name"
               :value="techno.name"
+              :id="techno.name"
             />
+          <label :for= "techno.name" class="grey">
+          <img class="centered-img" v-bind:src="techno.icon" width="24" height="24" alt="" />
+          <span>{{ techno.name }}</span>
+            
           </label>
-          <img class="centered-img" v-bind:src="techno.icon" width="24" height="24" alt="" />{{
-            techno.name
-          }}
         </li>
       </div>
     </ul>
