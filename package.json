@@ -10,7 +10,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "emailjs-com": "^3.2.0",
+    "express": "^5.1.0",
+    "node-fetch": "^3.3.2",
+    "nodemailer": "^7.0.9",
     "pinia": "^2.1.6",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4",
@@ -26,5 +30,10 @@
     "eslint-plugin-vue": "^9.16.1",
     "prettier": "^3.0.0",
     "vite": "^4.5.4"
-  }
+  },
+  "description": "You can see the project on portfolio.polepo.fr",
+  "main": "vite.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
 }

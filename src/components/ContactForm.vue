@@ -1,107 +1,82 @@
 <script setup>
 import { useStore } from '@/stores/store'
-import emailjs from 'emailjs-com'
 import { reactive, ref } from 'vue'
 
 const store = useStore()
 const form = ref(null)
-const settingTextearea = reactive({
-  isError: false,
-  placeholder: ''
-})
-const settingNameArea = reactive({
-  isError: false,
-  placeholder: ''
-})
-const settingEmailArea = reactive({
-  isError: false,
-  placeholder: ''
-})
-const sendMail = () => {
+const settingTextearea = reactive({ isError: false, placeholder: '' })
+const settingNameArea = reactive({ isError: false, placeholder: '' })
+const settingEmailArea = reactive({ isError: false, placeholder: '' })
+
+const SITE_KEY = '6Lcnc-QrAAAAAJANoG0K4ZSua_sGvPzeA5x-4Sxm' // ta clé reCAPTCHA v3
+
+const sendMail = async () => {
   let isError = false
   const contactFormStatus = document.querySelector('#contact-form-status')
   contactFormStatus.className = ''
-  console.log(store.contactForm.message)
-  if (store.contactForm.message == undefined || store.contactForm.message == '') {
-    settingTextearea.isError = isError = true
-    settingTextearea.placeholder = 'Message can not be blank'
-  } else {
-    settingTextearea.isError = false
-    settingTextearea.placeholder = ''
-  }
-  if (store.contactForm.name == undefined || store.contactForm.name == '') {
-    settingNameArea.isError = isError = true
-    settingNameArea.placeholder = 'name can not be blank'
-  } else {
-    settingTextearea.isError = false
-    settingTextearea.placeholder = ''
-  }
-  if (store.contactForm.email == undefined || store.contactForm.email == '') {
-    settingEmailArea.isError = isError = true
-    settingEmailArea.placeholder = 'email can not be blank'
-  } else {
-    settingTextearea.isError = false
-    settingTextearea.placeholder = ''
-  }
 
-  if (!isError) {
-    emailjs.init({
-      publicKey: 'zenfkgMGV-PfC2A69'
-    });
-    
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_EMAIL_JS_SERVICE,
-        import.meta.env.VITE_EMAIL_JS_TEMPLATE,
-        form.value,
-        import.meta.env.VITE_EMAIL_JS_USER
-      )
-      .then(
-        () => {
-          emailjs
-            .sendForm(
-              import.meta.env.VITE_EMAIL_JS_SERVICE,
-              import.meta.env.VITE_EMAIL_JS_CUSTOMER_TEMPLATE,
-              form.value,
-              import.meta.env.VITE_EMAIL_JS_USER
-            )
-            .then(
-              () => {
-                contactFormStatus.textContent = 'Message sent!'
-                contactFormStatus.classList.add('valid')
-                setTimeout(() => {
-                  const errorMsg = document.getElementById('contact-form-status')
-                  console.log(errorMsg)
-                  errorMsg.classList.remove('valid')
-                  errorMsg.textContent = ''
-                }, 3000)
-                store.resetContactForm()
-              },
-              (error) => {
-                console.log(error)
-                contactFormStatus.classList.add('error')
-                contactFormStatus.textContent = 'Confirmation message not sent, please try again'
-                setTimeout(() => {
-                  const errorMsg = document.getElementById('contact-form-status')
-                  console.log(errorMsg)
-                  errorMsg.classList.remove('error')
-                  errorMsg.textContent = ''
-                }, 3000)
-              }
-            )
-        },
-        (error) => {
-          console.log(error)
-          contactFormStatus.classList.add('error')
-          contactFormStatus.textContent = 'Message not sent, please try again'
-          setTimeout(() => {
-            const errorMsg = document.getElementById('contact-form-status')
-            console.log(errorMsg)
-            errorMsg.classList.remove('error')
-            errorMsg.textContent = ''
-          }, 3000)
-        }
-      )
+  // Vérification champs
+  if (!store.contactForm.message) {
+    settingTextearea.isError = isError = true
+    settingTextearea.placeholder = 'Message cannot be blank'
+  } else settingTextearea.isError = false
+
+  if (!store.contactForm.name) {
+    settingNameArea.isError = isError = true
+    settingNameArea.placeholder = 'Name cannot be blank'
+  } else settingNameArea.isError = false
+
+  if (!store.contactForm.email) {
+    settingEmailArea.isError = isError = true
+    settingEmailArea.placeholder = 'Email cannot be blank'
+  } else settingEmailArea.isError = false
+
+  if (isError) return
+
+  try {
+    // Exécuter reCAPTCHA
+    await grecaptcha.ready(async () => {
+      const token = await grecaptcha.execute(SITE_KEY, { action: 'submit' })
+
+      // Appel au backend
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: store.contactForm.email,
+          name: store.contactForm.name,
+          message: store.contactForm.message,
+          recaptchaToken: token
+        })
+      })
+
+      const data = await res.json()
+
+      if (data.success) {
+        contactFormStatus.textContent = 'Message sent!'
+        contactFormStatus.classList.add('valid')
+        setTimeout(() => {
+          contactFormStatus.classList.remove('valid')
+          contactFormStatus.textContent = ''
+        }, 3000)
+        store.resetContactForm()
+      } else {
+        contactFormStatus.textContent = data.error || 'Error sending message'
+        contactFormStatus.classList.add('error')
+        setTimeout(() => {
+          contactFormStatus.classList.remove('error')
+          contactFormStatus.textContent = ''
+        }, 3000)
+      }
+    })
+  } catch (err) {
+    console.error(err)
+    contactFormStatus.textContent = 'Error sending message'
+    contactFormStatus.classList.add('error')
+    setTimeout(() => {
+      contactFormStatus.classList.remove('error')
+      contactFormStatus.textContent = ''
+    }, 3000)
   }
 }
 </script>
@@ -110,32 +85,31 @@ const sendMail = () => {
   <div id="contact-form" class="item-column bordered">
     <div id="contact-form-container" class="flex-row">
       <div id="contact-form-inputs-container" class="item-column">
-        <form @submit.prevent="sendMail" class="form" ref="form" action="">
+        <form @submit.prevent="sendMail" class="form" ref="form">
           <div class="item-column">
             <label for="name">_name:</label>
             <input
               name="name"
-              place
               class="contact-input"
               v-model="store.contactForm.name"
               :placeholder="settingNameArea.placeholder"
-              :class="{ error: settingNameArea.isError, valid: !settingNameArea.isError }"
+              :class="{ error: settingNameArea.isError }"
               type="text"
             />
           </div>
           <div class="item-column">
-            <label for="name">_email:</label>
+            <label for="email">_email:</label>
             <input
               name="email"
               class="contact-input"
               v-model="store.contactForm.email"
               :placeholder="settingEmailArea.placeholder"
-              :class="{ error: settingEmailArea.isError, valid: !settingEmailArea.isError }"
+              :class="{ error: settingEmailArea.isError }"
               type="email"
             />
           </div>
           <div class="item-column">
-            <label name="message" for="name">_message:</label>
+            <label for="message">_message:</label>
             <textarea
               v-model="store.contactForm.message"
               :placeholder="settingTextearea.placeholder"
@@ -147,7 +121,7 @@ const sendMail = () => {
             ></textarea>
           </div>
           <div class="item-column">
-            <input class="contact-input" type="submit" id="submit-btn" value="Send(message)" />
+            <input class="contact-input" type="submit" id="submit-btn" value="Send message" />
             <p id="contact-form-status"></p>
           </div>
         </form>
